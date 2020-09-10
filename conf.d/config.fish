@@ -18,8 +18,8 @@ function graph
         git log --all --decorate --oneline --graph
     end
 
-function fishfunc                          
-        code ~/.config/fish/conf.d/config.fish
+function fishconf                          
+        code ~/.config/fish/
     end
 
 function mvngen                          
