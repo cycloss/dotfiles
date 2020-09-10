@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/ted/Developer/Java/junit/junit-platform-console-standalone-1.6.2.jar",
+        "/Users/ted/Developer/Java/javafx/**/*.jar"
+    ]
+}
