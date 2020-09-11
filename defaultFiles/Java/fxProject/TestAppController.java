@@ -8,7 +8,7 @@ public class TestAppController {
     private Button incrementButton;
 
     @FXML
-    private java.awt.Label pressCounter;
+    private Label pressCounter;
 
     private int count = 0;
 
@@ -16,13 +16,13 @@ public class TestAppController {
 
         incrementButton.setOnAction((e) -> {
             incrementCounter();
-        })
+        });
 
     }
 
     private void incrementCounter() {
         count++;
-        pressCounter.setText(count);
+        pressCounter.setText(String.valueOf(count));
     }
 
 }

@@ -6,6 +6,6 @@ function mkjavabase
         cp -r /Users/ted/.config/fish/defaultFiles/Java/standardProject/. .
         code .
     else
-        echo "Please provide a name for the project"
+        echo "Please provide a name for the Java project"
     end
 end
