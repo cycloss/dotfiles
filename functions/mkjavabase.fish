@@ -3,9 +3,7 @@ function mkjavabase
         echo "Creating Java Base Project $argv...."
         mkdir $argv
         cd $argv
-        cp /Users/ted/.config/fish/defaultFiles/Java/Main.java .
-        cp /Users/ted/.config/fish/defaultFiles/Java/MainTest.java .
-        cp -r /Users/ted/.config/fish/defaultFiles/Java/.vscode .
+        cp -r /Users/ted/.config/fish/defaultFiles/Java/standardProject/. .
         code .
     else
         echo "Please provide a name for the project"
