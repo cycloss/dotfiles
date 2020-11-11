@@ -1,8 +1,13 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR ANDROID_SDK_ROOT:/Users/ted/android_sdk/cmdline\x2dtools/version/bin\x1e/Users/ted/Developer/Flutter/cmdline\x2dtools/lateset/bin
+SETUVAR --export JAVA_HOME:/Library/Java/JavaVirtualMachines/jdk\x2d14\x2e0\x2e2\x2ejdk/Contents/Home
 SETUVAR --export LSCOLORS:cx
 SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr_cpg:code\x20/Users/ted/Developer/C/Playground
+SETUVAR _fish_abbr_dt:cd\x20/Users/ted/desktop
+SETUVAR _fish_abbr_jpg:code\x20/Users/ted/Developer/Java/Playground
+SETUVAR _fish_abbr_listjdks:/usr/libexec/java_home\x20\x2dV
 SETUVAR fish_color_autosuggestion:4c566a
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:81a1c1
@@ -33,4 +38,11 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_user_paths:/Users/ted/Developer/Flutter/flutter/bin\x1e/Users/ted/Developer/Java/maven/bin\x1e/Users/ted/Developer/Java
+SETUVAR --export headers:/usr/local/include
+SETUVAR --export hted:/usr/local/include/ted\x2eh
+SETUVAR j11:11\x2e0\x2e9
+SETUVAR j14:14\x2e0\x2e2
 SETUVAR --export javafx:/Users/ted/Developer/Java/javafx/lib
+SETUVAR --export libs:/usr/local/lib
+SETUVAR --export libted:/usr/local/lib/libted\x2ea
+SETUVAR world:hello
