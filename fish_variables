@@ -5,9 +5,16 @@ SETUVAR --export JAVA_HOME:/Library/Java/JavaVirtualMachines/jdk\x2d14\x2e0\x2e2
 SETUVAR --export LSCOLORS:cx
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_cpg:code\x20/Users/ted/Developer/C/Playground
-SETUVAR _fish_abbr_dt:cd\x20/Users/ted/desktop
+SETUVAR _fish_abbr_dev:cd\x20\x7e/Developer
+SETUVAR _fish_abbr_dpg:code\x20/Users/ted/Developer/Flutter/DartPlayground/
+SETUVAR _fish_abbr_dt:cd\x20/Users/ted/Desktop
+SETUVAR _fish_abbr_fpg:code\x20/Users/ted/Developer/Fish/FishPlayground
+SETUVAR _fish_abbr_graph:git\x20log\x20\x2d\x2dall\x20\x2d\x2ddecorate\x20\x2d\x2doneline\x20\x2d\x2dgraph
+SETUVAR _fish_abbr_jdev:cd\x20\x7e/Developer/Java
 SETUVAR _fish_abbr_jpg:code\x20/Users/ted/Developer/Java/Playground
 SETUVAR _fish_abbr_listjdks:/usr/libexec/java_home\x20\x2dV
+SETUVAR _fish_abbr_lsf:ls\x20/Users/ted/\x2econfig/fish/functions\x20\x7c\x20sed\x20\x2dE\x20\x27s/\x5e\x28\x2e\x2a\x29\x2efish/\x5c1/g\x27
+SETUVAR dev:/Users/ted/Developer
 SETUVAR fish_color_autosuggestion:4c566a
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:81a1c1
