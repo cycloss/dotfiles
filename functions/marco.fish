@@ -1,3 +1,4 @@
 function marco
-pwd > /Users/ted/.config/fish/marco
+    set -Ux marco (pwd)
+    echo "marco set to $marco"
 end

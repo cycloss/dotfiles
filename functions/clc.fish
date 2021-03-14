@@ -1,6 +1,6 @@
-#if arg n provided, will copy the nth last command executed
-#if none will copy last command
-function cl
+function clc
+    #if arg n provided, will copy the nth last command executed
+    #if none will copy last command
     if test -n "$argv[1]"
         if string match -qr '\d+' $argv[1]
             set last (history | sed -n "$argv[1]p")
@@ -11,6 +11,6 @@ function cl
     else
         set last (history | head -n1)
     end
-    echo $last | pbcopy
+    echo -n $last | pbcopy
     echo "Copied '$last' to clip board..."
 end

@@ -60,3 +60,4 @@ SETUVAR --export javafx:/Users/ted/Developer/Java/javafx/lib
 SETUVAR --export junit:/Users/ted/Developer/Java/junit/junit\x2dplatform\x2dconsole\x2dstandalone\x2d1\x2e6\x2e2\x2ejar
 SETUVAR --export libs:/usr/local/lib
 SETUVAR --export libted:/usr/local/lib/libted\x2ea
+SETUVAR --export marco:/Users/ted/\x2econfig/fish
