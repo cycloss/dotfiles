@@ -1,0 +1,13 @@
+set nohelp true
+
+unbind M-B all
+bind M-B prevword all
+unbind M-F all
+bind M-F nextword all
+unbind ^K main
+unbind ^U main
+unbind ^K main
+bind ^Z undo main
+bind ^U cut main
+unbind ^Y main
+bind ^Y paste main
