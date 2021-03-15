@@ -1,0 +1,13 @@
+[core]
+	editor = code -n --wait
+[user]
+	name = Ccyclos
+	email = lucasroweeh@gmail.com
+[merge]
+    	tool = vscode
+[mergetool "vscode"]
+    	cmd = code -n --wait $MERGED
+[diff]
+    	tool = vscode
+[difftool "vscode"]
+    	cmd = code -n --wait --diff $LOCAL $REMOTE

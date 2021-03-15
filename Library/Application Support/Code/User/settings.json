@@ -1,0 +1,356 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.semanticHighlighting.enabled": true,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/ted/Developer/Java/junit/junit-platform-console-standalone-1.6.2.jar"
+    ],
+    "python.languageServer": "Microsoft",
+    "workbench.editor.tabCloseButton": "left",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorCustomizations": {},
+    "todohighlight.keywords": [
+        {
+            "text": "(",
+            "color": "#D4D4D4",
+            "backgroundColor": "#FF000000",
+        },
+        {
+            "text": ")",
+            "color": "#D4D4D4",
+            "backgroundColor": "#FF000000",
+        },
+        {
+            "text": "{",
+            "color": "#D4D4D4",
+            "backgroundColor": "#FF000000",
+        },
+        {
+            "text": "}",
+            "color": "#D4D4D4",
+            "backgroundColor": "#FF000000",
+        },
+        {
+            "text": "]",
+            "color": "#D4D4D4",
+            "backgroundColor": "#FF000000",
+        },
+        {
+            "text": "[",
+            "color": "#D4D4D4",
+            "backgroundColor": "#FF000000",
+        },
+        {
+            "text": "void",
+            "color": "#FB649F",
+            "backgroundColor": "#FF000000",
+        },
+    ],
+    "editor.tokenColorCustomizations": {
+        "comments": "#59965B",
+        "types": "#2AD7FC",
+        "strings": "#79a070",
+        "keywords": "#FB649F",
+        "functions": "#FFC677",
+        "variables": "#7ebdb3",
+        "numbers": "#8684dc",
+        "textMateRules": [
+            {
+                "scope": "storage.modifier",
+                "settings": {
+                    "foreground": "#FB649F",
+                    "fontStyle": "bold"
+                },
+            },
+            {
+                "scope": "keyword.other",
+                "settings": {
+                    "foreground": "#FB649F",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "keyword.declaration.dart",
+                "settings": {
+                    "foreground": "#FB649F",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "keyword.control.ternary",
+                "settings": {
+                    "foreground": "#D4D4D4",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "punctuation",
+                "settings": {
+                    "foreground": "#D4D4D4"
+                }
+            },
+            {
+                "scope": "keyword.control.dart",
+                "settings": {
+                    "foreground": "#FB649F",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "keyword.control.new",
+                "settings": {
+                    "foreground": "#FB649F",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "storage.type",
+                "settings": {
+                    "foreground": "#FB649F",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "keyword.control",
+                "settings": {
+                    "foreground": "#FB649F",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "variable.language",
+                "settings": {
+                    "foreground": "#FB649F",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "source.dart",
+                "settings": {
+                    "foreground": "#7ebdb3"
+                }
+            },
+            {
+                "scope": "punctuation.definition.string.end",
+                "settings": {
+                    "foreground": "#79a070"
+                }
+            },
+            {
+                "scope": "punctuation.definition.string.begin",
+                "settings": {
+                    "foreground": "#79a070"
+                }
+            },
+            {
+                "scope": "storage.type.primitive.java",
+                "settings": {
+                    "foreground": "#5a914d"
+                }
+            },
+            {
+                "scope": "source.python",
+                "settings": {
+                    "foreground": "#7ebdb3"
+                }
+            },
+            {
+                "scope": "meta.function-call.arguments.python",
+                "settings": {
+                    "foreground": "#7ebdb3"
+                }
+            },
+            {
+                "scope": "meta.function-call.python",
+                "settings": {
+                    "foreground": "#FFC677"
+                }
+            },
+            {
+                "scope": "support.type.python",
+                "settings": {
+                    "foreground": "#2AD7FC"
+                }
+            },
+            {
+                "scope": "variable.parameter.function.language.python",
+                "settings": {
+                    "foreground": "#4EC9B0"
+                }
+            },
+            {
+                "scope": "meta.function.parameters.python",
+                "settings": {
+                    "foreground": "#2AD7FC"
+                }
+            },
+            {
+                "scope": "source.swift",
+                "settings": {
+                    "foreground": "#7ebdb3"
+                }
+            },
+            {
+                "scope": "source.gdscript",
+                "settings": {
+                    "foreground": "#7ebdb3"
+                }
+            },
+            {
+                "scope": "keyword.language.gdscript",
+                "settings": {
+                    "foreground": "#FB649F"
+                }
+            }
+        ]
+    },
+    "editor.fontSize": 14,
+    "editor.lineHeight": 24,
+    "editor.hover.delay": 100,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "maven.executable.path": "/Users/ted/Developer/Java/maven/bin/mvn",
+    "java.project.importOnFirstTimeStartup": "automatic",
+    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+    "editor.codeLens": false,
+    "pasteImage.path": "${currentFileDir}/Images",
+    "markdown.preview.breaks": true,
+    "launch": {
+        "configurations": [
+            {
+                "type": "java",
+                "name": "Debug Java File",
+                "request": "launch",
+                "mainClass": "${file}"
+            },
+            {
+                "type": "java",
+                "name": "Debug JavaFX",
+                "request": "launch",
+                "mainClass": "${file}",
+                "vmArgs": "--module-path /Users/ted/Developer/Java/javafx/lib --add-modules ALL-MODULE-PATH"
+            },
+            {
+                "name": "Debug Dart file",
+                "type": "dart",
+                "request": "launch",
+                "program": "${fileDirname}/${fileBasename}",
+                "cwd": "${fileDirname}",
+            },
+            // make sure python interpreter has been selected
+            {
+                "type": "python",
+                "name": "Debug Python file",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal",
+                "python": "${command:python.interpreterPath}"
+            }
+        ],
+        "compounds": []
+    },
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.formatOnSave": true,
+    "python.showStartPage": false,
+    "editor.hover.enabled": false,
+    "editor.quickSuggestionsDelay": 0,
+    "code-runner.runInTerminal": true,
+    "extensions.ignoreRecommendations": false,
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc -Wall $fileName -o $fileNameWithoutExt -lcs50 && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "python3 -u",
+        "perl": "perl",
+        "perl6": "perl6",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "cd $dir && mcs $fileName && mono $fileNameWithoutExt.exe",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "applescript": "osascript",
+        "clojure": "lein exec",
+        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "racket": "racket",
+        "scheme": "csi -script",
+        "ahk": "autohotkey",
+        "autoit": "autoit3",
+        "dart": "dart",
+        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+        "haskell": "runhaskell",
+        "nim": "nim compile --verbosity:0 --hints:off --run",
+        "lisp": "sbcl --script",
+        "kit": "kitc --run",
+        "v": "v run",
+        "sass": "sass --style expanded",
+        "scss": "scss --style expanded",
+        "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+        "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+    },
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Webkit, BreakBeforeBraces: Attach, IndentCaseLabels: true}",
+    "C_Cpp.default.includePath": [
+        "/usr/local/include",
+    ],
+    "discord.lowerDetailsEditing": "{current_line}",
+    "discord.lowerDetailsDebugging": "",
+    "discord.detailsEditing": "Editing a {lang} file",
+    "discord.workspaceElapsedTime": true,
+    "discord.largeImageIdle": "{null}",
+    "todo-tree.tree.showScanModeButton": false,
+    "editor.minimap.enabled": false,
+    "discord.detailsDebugging": "Debugging a {lang} file",
+    "omnisharp.useGlobalMono": "always",
+    "java.refactor.renameFromFileExplorer": "preview",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+    "python.formatting.provider": "yapf",
+    "sde.languageServerMode": "sourcekit-lsp",
+    "python.pythonPath": "/usr/local/bin/python3",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "information"
+    },
+    "workbench.editor.tabSizing": "shrink",
+    "csharp.format.enable": true,
+    "java.test.config": {
+        "workingDirectory": "${workspaceFolder}"
+    },
+    "workbench.statusBar.visible": false,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.showRunIconInEditorTitleMenu": false,
+    "sourcekit-lsp.serverPath": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
+    "sourcekit-lsp.toolchainPath": "/usr/bin/swift",
+}
