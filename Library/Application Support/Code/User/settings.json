@@ -6,7 +6,6 @@
         "lib/**/*.jar",
         "/Users/ted/Developer/Java/junit/junit-platform-console-standalone-1.6.2.jar"
     ],
-    "python.languageServer": "Microsoft",
     "workbench.editor.tabCloseButton": "left",
     "files.exclude": {
         "**/.classpath": true,
@@ -319,7 +318,7 @@
     "C_Cpp.default.includePath": [
         "/usr/local/include",
     ],
-    "discord.lowerDetailsEditing": "{current_line}",
+    "discord.lowerDetailsEditing": "Line: {current_line}",
     "discord.lowerDetailsDebugging": "",
     "discord.detailsEditing": "Editing a {lang} file",
     "discord.workspaceElapsedTime": true,
@@ -353,4 +352,13 @@
     "code-runner.showRunIconInEditorTitleMenu": false,
     "sourcekit-lsp.serverPath": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
     "sourcekit-lsp.toolchainPath": "/usr/bin/swift",
+    "markdown-preview-enhanced.mermaidTheme": "dark",
+    "markdown-preview-enhanced.previewTheme": "github-dark.css",
+    "pasteImage.insertPattern": "![image](${imageFilePath}${imageSyntaxSuffix}",
+    "markdownlint.config": {
+        "MD007": {
+            "indent": 4
+        },
+    },
+    "python.languageServer": "Pylance"
 }

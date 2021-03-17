@@ -51,7 +51,7 @@
         "when": "!inDebugMode"
     },
     {
-        "key": "alt+e",
+        "key": "cmd+e",
         "command": "workbench.view.explorer"
     },
     {
@@ -147,11 +147,6 @@
         "when": "inKeybindings"
     },
     {
-        "key": "alt+cmd+p",
-        "command": "editor.action.marker.next",
-        "when": "editorFocus"
-    },
-    {
         "key": "alt+f8",
         "command": "-editor.action.marker.next",
         "when": "editorFocus"
@@ -202,17 +197,19 @@
         "when": "editorLangId != 'java'"
     },
     {
-        "key": "cmd+4",
-        "command": "-workbench.action.focusFourthEditorGroup"
-    },
-    {
-        "key": "cmd+2",
-        "command": "-workbench.action.focusSecondEditorGroup"
+        "key": "alt+cmd+f",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "!editorFocus"
     },
     {
         "key": "cmd+t",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "!editorFocus"
+    },
+    {
+        "key": "cmd+f",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "editorFocus && searchFocus"
     },
     {
         "key": "cmd+g",
@@ -279,5 +276,63 @@
         "key": "cmd+u",
         "command": "-cursorUndo",
         "when": "textInputFocus"
+    },
+    {
+        "key": "alt+cmd+v",
+        "command": "extension.pasteImage",
+        "when": "editorTextFocus && editorLangId == 'markdown'"
+    },
+    {
+        "key": "alt+cmd+v",
+        "command": "-extension.pasteImage",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+f",
+        "command": "workbench.action.findInFiles",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+cmd+f",
+        "command": "-editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "alt+cmd+o",
+        "command": "search.action.focusNextSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "alt+cmd+u",
+        "command": "search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "shift+f4",
+        "command": "-search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "cmd+f",
+        "command": "closeFindWidget",
+        "when": "editorFocus && findWidgetVisible && !isComposing"
+    },
+    {
+        "key": "alt+cmd+p",
+        "command": "-togglePreserveCase",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+cmd+p",
+        "command": "-toggleSearchPreserveCase",
+        "when": "searchViewletFocus"
+    },
+    {
+        "key": "alt+cmd+p",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "shift+cmd+p",
+        "command": "-workbench.action.showCommands"
     }
 ]
