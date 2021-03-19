@@ -182,11 +182,6 @@
         "when": "inSearchEditor && searchInputBoxFocus"
     },
     {
-        "key": "alt+cmd+c",
-        "command": "workbench.action.debug.continue",
-        "when": "inDebugMode"
-    },
-    {
         "key": "f5",
         "command": "-workbench.action.debug.continue",
         "when": "inDebugMode"
@@ -249,7 +244,7 @@
     },
     {
         "key": "cmd+u",
-        "command": "workbench.action.previousEditor"
+        "command": "workbench.action.previousEditorInGroup"
     },
     {
         "key": "alt+cmd+left",
@@ -257,11 +252,11 @@
     },
     {
         "key": "cmd+o",
-        "command": "workbench.action.nextEditor"
+        "command": "workbench.action.nextEditorInGroup"
     },
     {
         "key": "shift+cmd+]",
-        "command": "-workbench.action.nextEditor"
+        "command": "-workbench.action.EditorInGroupr"
     },
     {
         "key": "cmd+o",
@@ -290,6 +285,9 @@
     {
         "key": "alt+cmd+f",
         "command": "workbench.action.findInFiles",
+        "args": {
+            "regexp": true,
+        },
         "when": "editorFocus"
     },
     {
@@ -334,5 +332,110 @@
     {
         "key": "shift+cmd+p",
         "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "alt+cmd+m",
+        "command": "-latex-workshop.toggleMathPreviewPanel",
+        "when": "!config.latex-workshop.bind.altKeymap.enabled && editorLangId =~ /latex|rsweave|jlweave/"
+    },
+    {
+        "key": "shift+cmd+v",
+        "command": "-markdown-preview-enhanced.openPreview",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "alt+cmd+m",
+        "command": "markdown-preview-enhanced.openPreviewToTheSide",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "cmd+k v",
+        "command": "-markdown-preview-enhanced.openPreviewToTheSide",
+        "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "alt+cmd+.",
+        "command": "-editor.action.autoFix",
+        "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
+    },
+    {
+        "key": "alt+cmd+.",
+        "command": "workbench.action.focusNextGroup"
+    },
+    {
+        "key": "alt+cmd+,",
+        "command": "workbench.action.focusPreviousGroup"
+    },
+    {
+        "key": "cmd+n",
+        "command": "explorer.newFile"
+    },
+    {
+        "key": "cmd+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "alt+cmd+c",
+        "command": "-java.view.package.copyFilePath",
+        "when": "focusedView == 'javaProjectExplorer' && java:serverMode == 'Standard'"
+    },
+    {
+        "key": "alt+cmd+c",
+        "command": "-latex-workshop.clean",
+        "when": "!config.latex-workshop.bind.altKeymap.enabled && editorLangId =~ /latex|rsweave|jlweave/"
+    },
+    {
+        "key": "alt+cmd+c",
+        "command": "-workbench.action.terminal.toggleFindCaseSensitive",
+        "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "cmd+`",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "down",
+        "command": "editor.action.nextMatchFindAction",
+        "when": "editorFocus && findInputFocussed"
+    },
+    {
+        "key": "enter",
+        "command": "-editor.action.nextMatchFindAction",
+        "when": "editorFocus && findInputFocussed"
+    },
+    {
+        "key": "shift+f3",
+        "command": "-editor.action.previousMatchFindAction",
+        "when": "editorFocus"
+    },
+    {
+        "key": "up",
+        "command": "editor.action.previousMatchFindAction",
+        "when": "editorFocus && findInputFocussed"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-editor.action.previousMatchFindAction",
+        "when": "editorFocus && findInputFocussed"
+    },
+    {
+        "key": "alt+cmd+n",
+        "command": "explorer.newFolder"
+    },
+    {
+        "key": "cmd+/",
+        "command": "-editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+/",
+        "command": "-toggleExplainMode",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "cmd+k cmd+/",
+        "command": "-editor.foldAllBlockComments",
+        "when": "editorTextFocus && foldingEnabled"
     }
 ]

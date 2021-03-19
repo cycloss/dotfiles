@@ -1,4 +1,4 @@
-function getkey
+function getkey -d 'Gets apple script keycodes'
     if test (count $argv) -ne 1
         echo "Please provide a search term"
         return

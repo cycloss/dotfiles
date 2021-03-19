@@ -1,4 +1,4 @@
-function cwd
+function cwd -d 'Copies current working directory to clipboard'
     set -l joined (pwd)
     if test -n "$argv[1]"
         set joined $joined"/$argv[1]"

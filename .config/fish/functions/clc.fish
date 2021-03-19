@@ -1,4 +1,4 @@
-function clc
+function clc -d 'Copies last command to clip board'
     #if arg n provided, will copy the nth last command executed
     #if none will copy last command
     if test -n "$argv[1]"

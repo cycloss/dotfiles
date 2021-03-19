@@ -1,4 +1,4 @@
-function mkcbase
+function mkcbase -d 'Creates a new C project base'
     if test (count $argv) -eq 1
         echo "Creating C Base Project $argv...."
         mkdir $argv
