@@ -1,5 +1,5 @@
 
-function mkcode -d 'Makes an empty project'
+function mke -d 'Makes an empty project in vscode'
     if test (count $argv) -ne 1
         echo 'Please provide a single project name'
         return 1
