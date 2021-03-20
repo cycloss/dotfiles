@@ -217,10 +217,6 @@
         "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
     },
     {
-        "key": "cmd+g",
-        "command": "workbench.action.gotoLine"
-    },
-    {
         "key": "ctrl+g",
         "command": "-workbench.action.gotoLine"
     },
@@ -437,5 +433,10 @@
         "key": "cmd+k cmd+/",
         "command": "-editor.foldAllBlockComments",
         "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "cmd+g",
+        "command": "editor.action.nextMatchFindAction",
+        "when": "editorFocus && findInputFocussed"
     }
 ]
