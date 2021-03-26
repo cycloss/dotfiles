@@ -362,5 +362,5 @@
         "MD001": false,
         "MD024": false
     },
-    "python.languageServer": "Pylance"
+    "python.languageServer": "Pylance",
 }

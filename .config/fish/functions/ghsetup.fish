@@ -12,7 +12,7 @@ function ghsetup -d 'Sets up a new GitHub repo. (-p | --private)'
     # -s is silent, S is show error even when silenced
     set -l res (curl -sS -u lucas979797:(cat /Users/ted/.k) https://api.github.com/user/repos -d "{\"name\":\"$argv\",\"private\":$visibility}")
     # -j is raw with no new line
-    set -l url (echo $res | jq -j .git_url)
+    set -l url (echo $res | jq -j .git_url | sed 's/git:\/\//https:\/\//g')
     set_color brgreen
     echo -e "Remote repo "$argv" successfully created!\n"
     set_color normal
