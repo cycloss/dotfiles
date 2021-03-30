@@ -1,4 +1,5 @@
-function dotupd -d 'Loads new files and adds all changes to dotfile repo'
+# Defined in /var/folders/l6/4wtwvg1903l93zlk1_5rzrzr0000gn/T//fish.SaR0NS/dotupd.fish @ line 1
+function dotupd --description 'Loads new files and adds all changes to dotfile repo'
     code --list-extensions >'/Users/ted/Library/Application Support/Code/User/extensions.txt'
     echo 'Saved vscode extensions...'
     brew bundle dump -f --file=/Users/ted/.brewfile
