@@ -2,7 +2,7 @@
 	editor = code -n --wait
 [user]
 	name = Ccyclos
-	email = lucasroweeh@gmail.com
+	email = 50776059+lucas979797@users.noreply.github.com
 [merge]
     	tool = vscode
 [mergetool "vscode"]
