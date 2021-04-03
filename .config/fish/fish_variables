@@ -30,6 +30,7 @@ SETUVAR _fish_abbr_now:date\x20\x2b\x25T
 SETUVAR _fish_abbr_nowtoday:date\x20\x2b\x25T\x7e\x25x
 SETUVAR _fish_abbr_pchal:code\x20/Users/ted/Developer/Python/Challenges
 SETUVAR _fish_abbr_ppg:code\x20/Users/ted/Developer/Python/Playground
+SETUVAR _fish_abbr_tocgen:gh\x2dmd\x2dtoc
 SETUVAR _fish_abbr_today:date\x20\x2b\x25x
 SETUVAR fish_color_autosuggestion:4c566a
 SETUVAR fish_color_cancel:\x2dr
