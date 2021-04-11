@@ -8,6 +8,7 @@ SETUVAR --export LSCOLORS:cx
 SETUVAR --export --path PYTHONPATH:/Users/ted/Developer/Python
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_btt:open\x20/Applications/BetterTouchTool\x2eapp
+SETUVAR _fish_abbr_cloud:cd\x20\x7e/Library/Mobile\x5c\x20Documents/com\x7eapple\x7eCloudDocs/
 SETUVAR _fish_abbr_cn:code\x20/Users/ted/Documents/Notes
 SETUVAR _fish_abbr_cpg:code\x20/Users/ted/Developer/C/Playground
 SETUVAR _fish_abbr_dev:cd\x20\x7e/Developer
@@ -19,6 +20,7 @@ SETUVAR _fish_abbr_dpg:code\x20/Users/ted/Developer/Flutter/DartPlayground/
 SETUVAR _fish_abbr_dt:cd\x20/Users/ted/Desktop
 SETUVAR _fish_abbr_fpg:code\x20/Users/ted/Developer/Fish/FishPlayground
 SETUVAR _fish_abbr_funced:funced\x20\x2ds
+SETUVAR _fish_abbr_gas:git\x20add\x20\x2dA\x20\x26\x26\x20git\x20status
 SETUVAR _fish_abbr_graph:git\x20log\x20\x2d\x2dall\x20\x2d\x2ddecorate\x20\x2d\x2doneline\x20\x2d\x2dgraph
 SETUVAR _fish_abbr_gs:git\x20status
 SETUVAR _fish_abbr_home:cd\x20/Users/ted/
@@ -70,4 +72,4 @@ SETUVAR --export javafx:/Users/ted/Developer/Java/javafx/lib
 SETUVAR --export junit:/Users/ted/Developer/Java/junit/junit\x2dplatform\x2dconsole\x2dstandalone\x2d1\x2e6\x2e2\x2ejar
 SETUVAR --export libs:/usr/local/lib
 SETUVAR --export libted:/usr/local/lib/libted\x2ea
-SETUVAR --export marco:/Users/ted/Desktop/test
+SETUVAR --export marco:/Users/ted/Library/Application\x20Support/Code

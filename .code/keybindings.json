@@ -21,11 +21,6 @@
         "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
     },
     {
-        "key": "alt+cmd+f",
-        "command": "editor.action.selectHighlights",
-        "when": "editorFocus"
-    },
-    {
         "key": "shift+cmd+l",
         "command": "-editor.action.selectHighlights",
         "when": "editorFocus"
@@ -192,12 +187,17 @@
         "when": "editorLangId != 'java'"
     },
     {
-        "key": "alt+cmd+f",
+        "key": "alt+cmd+9 cmd",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "cmd+t",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "!editorFocus"
     },
     {
-        "key": "cmd+t",
+        "key": "alt+cmd+f",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "!editorFocus"
     },
@@ -284,7 +284,7 @@
         "args": {
             "regexp": true,
         },
-        "when": "editorFocus"
+        "when": "!inSearchEditor"
     },
     {
         "key": "alt+cmd+f",

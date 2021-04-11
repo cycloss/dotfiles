@@ -1,5 +1,5 @@
-function funcls -d 'Lists all user defined fish functions'
-    set -l funcs (ls /Users/ted/.config/fish/functions | ggrep -oP '.*(?=.fish)')
+function funcls --description 'Lists all user defined fish functions'
+    set -l funcs (ls $HOME/.config/fish/functions | ggrep -oP '.*(?=.fish)')
     for fun in $funcs
         printf '%-15s' $fun
         set -l description (desc $fun)

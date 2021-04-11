@@ -1,5 +1,5 @@
 
-function xnew -d 'Executes a command in a new terminal window'
+function exnew -d 'Executes a command in a new terminal window'
     # executes a command in a new terminal window
     # opens a new terminal window if no command
     # does not work with piped commands
