@@ -3,7 +3,7 @@ function mkjb -d 'Creates a new Java project base'
         echo "Creating Java Base Project $argv...."
         mkdir $argv
         cd $argv
-        cp -r /Users/ted/.config/fish/defaultFiles/Java/standardProject/. .
+        cp -r $HOME/.config/fish/defaultFiles/Java/standardProject/. .
         code .
     else
         echo "Please provide a name for the Java project"

@@ -1,3 +1,4 @@
+# Defined in /var/folders/l6/4wtwvg1903l93zlk1_5rzrzr0000gn/T//fish.aQ9tnO/dotupd.fish @ line 2
 function dotupd --description 'Loads new files and adds all changes to dotfile repo'
     code --list-extensions >"$HOME/.code/extensions.txt"
     cp "$HOME/Library/Application Support/Code/User/settings.json" "$HOME/.code"

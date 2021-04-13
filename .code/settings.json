@@ -366,4 +366,7 @@
     "debug.openDebug": "openOnDebugBreak",
     "debug.internalConsoleOptions": "openOnSessionStart",
     "debug.showInStatusBar": "always",
+    "code-runner.ignoreSelection": true,
+    "dart.showSkippedTests": true,
+    "code-runner.preserveFocus": false,
 }

@@ -1,3 +1,3 @@
 function gofish -d 'Navigates to the fish directory'
-    cd /Users/ted/.config/fish/
+    cd $HOME/.config/fish/
 end

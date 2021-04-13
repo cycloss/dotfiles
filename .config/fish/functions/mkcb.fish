@@ -3,7 +3,7 @@ function mkcb -d 'Creates a new C project base'
         echo "Creating C Base Project $argv...."
         mkdir $argv
         cd $argv
-        cp -r /Users/ted/.config/fish/defaultFiles/C/cProject/. .
+        cp -r $HOME/.config/fish/defaultFiles/C/cProject/. .
         code .
     else
         echo "Please provide a name for the C project"
