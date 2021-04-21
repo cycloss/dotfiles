@@ -438,5 +438,26 @@
         "key": "cmd+g",
         "command": "editor.action.nextMatchFindAction",
         "when": "editorFocus && findInputFocussed"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+b",
+        "command": "workbench.action.tasks.build"
+    },
+    {
+        "key": "shift+cmd+b",
+        "command": "-workbench.action.tasks.build"
+    },
+    {
+        "key": "alt+cmd+b",
+        "command": "-latex-workshop.build",
+        "when": "!config.latex-workshop.bind.altKeymap.enabled && editorLangId =~ /latex|rsweave|jlweave/"
+    },
+    {
+        "key": "alt+cmd+b",
+        "command": "workbench.action.tasks.configureDefaultBuildTask",
     }
 ]

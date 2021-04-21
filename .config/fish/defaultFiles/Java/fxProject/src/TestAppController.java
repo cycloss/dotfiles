@@ -14,10 +14,6 @@ public class TestAppController {
 
     public void initialize() {
 
-        incrementButton.setOnAction((e) -> {
-            incrementCounter();
-        });
-
     }
 
     private void incrementCounter() {
