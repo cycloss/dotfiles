@@ -17,7 +17,7 @@ SETUVAR _fish_abbr_dota:git\x20\x2d\x2dgit\x2ddir\x20/Users/ted/Dotfiles/\x20\x2
 SETUVAR _fish_abbr_dots:git\x20\x2d\x2dgit\x2ddir\x20/Users/ted/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d/Users/ted\x20status
 SETUVAR _fish_abbr_dotu:git\x20\x2d\x2dgit\x2ddir\x20/Users/ted/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d/Users/ted\x20add\x20\x2du
 SETUVAR _fish_abbr_dpg:code\x20/Users/ted/Developer/Flutter/DartPlayground/
-SETUVAR _fish_abbr_dt:cd\x20$HOME/Desktop
+SETUVAR _fish_abbr_dt:cd\x20\x24HOME/Desktop
 SETUVAR _fish_abbr_fpg:code\x20/Users/ted/Developer/Fish/FishPlayground
 SETUVAR _fish_abbr_funced:funced\x20\x2ds
 SETUVAR _fish_abbr_gas:git\x20add\x20\x2dA\x20\x26\x26\x20git\x20status
@@ -72,4 +72,4 @@ SETUVAR --export javafx:/Users/ted/Developer/Java/javafx/lib
 SETUVAR --export junit:/Users/ted/Developer/Java/junit/junit\x2dplatform\x2dconsole\x2dstandalone\x2d1\x2e6\x2e2\x2ejar
 SETUVAR --export libs:/usr/local/lib
 SETUVAR --export libted:/usr/local/lib/libted\x2ea
-SETUVAR --export marco:/Users/ted/Library/Application\x20Support/Code
+SETUVAR --export marco:/Users/ted/Desktop

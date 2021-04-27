@@ -318,6 +318,8 @@
     "C_Cpp.default.includePath": [
         "/usr/local/include",
     ],
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+    "discord.largeImage": "{LANG}",
     "discord.lowerDetailsEditing": "Line: {current_line}",
     "discord.lowerDetailsDebugging": "",
     "discord.detailsEditing": "Editing a {lang} file",
@@ -369,4 +371,40 @@
     "code-runner.ignoreSelection": true,
     "dart.showSkippedTests": true,
     "code-runner.preserveFocus": false,
+    "macros": {
+        "faker": [
+            {
+                "command": "type",
+                "args": {
+                    "text": "\""
+                },
+            },
+            {
+                "command": "randomeverything.email",
+            },
+            {
+                "command": "type",
+                "args": {
+                    "text": "\", "
+                }
+            }
+        ],
+        "lorem": [
+            {
+                "command": "type",
+                "args": {
+                    "text": "\""
+                },
+            },
+            {
+                "command": "lorem-ipsum.line",
+            },
+            {
+                "command": "type",
+                "args": {
+                    "text": "\", "
+                }
+            }
+        ]
+    }
 }

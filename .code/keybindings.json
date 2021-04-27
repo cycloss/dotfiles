@@ -459,5 +459,9 @@
     {
         "key": "alt+cmd+b",
         "command": "workbench.action.tasks.configureDefaultBuildTask",
-    }
+    },
+    {
+        "key": "cmd+m",
+        "command": "macros.faker",
+    },
 ]
