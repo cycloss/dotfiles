@@ -8,7 +8,7 @@ unbind ^K main
 unbind ^U main
 unbind ^K main
 bind ^Z undo main
-bind ^U cut main
+bind ^k cut main
 unbind ^Y main
 bind ^Y paste main
 bind ^W exit all

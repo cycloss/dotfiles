@@ -16,7 +16,9 @@ map <enter> $$EDITOR "$f"
 map del trash
 
 
-map o $code $f
+map oc $code $f
+# open default
+map od $open $f
 
 map h set hidden!
 map <c-o> openCode

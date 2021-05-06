@@ -4,5 +4,6 @@ function lfcd -d 'lf with cd to lfs cwd on exit'
     /usr/local/bin/lf
     if test -n $lfDir && test -d $lfDir
         cd $lfDir
+        set -Ux lfDir ''
     end
 end
