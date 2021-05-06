@@ -187,17 +187,17 @@
         "when": "editorLangId != 'java'"
     },
     {
-        "key": "alt+cmd+9 cmd",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "inSearchEditor"
-    },
-    {
         "key": "cmd+t",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "!editorFocus"
     },
     {
         "key": "alt+cmd+f",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "cmd+p",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "!editorFocus"
     },
@@ -322,8 +322,9 @@
         "when": "searchViewletFocus"
     },
     {
-        "key": "alt+cmd+p",
-        "command": "workbench.action.showCommands"
+        "key": "cmd+p",
+        "command": "workbench.action.showCommands",
+        "when": "!inQuickOpen"
     },
     {
         "key": "shift+cmd+p",
@@ -337,11 +338,6 @@
     {
         "key": "shift+cmd+v",
         "command": "-markdown-preview-enhanced.openPreview",
-        "when": "editorLangId == 'markdown'"
-    },
-    {
-        "key": "alt+cmd+m",
-        "command": "markdown-preview-enhanced.openPreviewToTheSide",
         "when": "editorLangId == 'markdown'"
     },
     {
@@ -363,7 +359,7 @@
         "command": "workbench.action.focusPreviousGroup"
     },
     {
-        "key": "cmd+n",
+        "key": "shift+cmd+n",
         "command": "explorer.newFile"
     },
     {
@@ -463,5 +459,84 @@
     {
         "key": "cmd+m",
         "command": "macros.faker",
+    },
+    {
+        "key": "alt+cmd+m",
+        "command": "workbench.action.openSettingsJson"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "cmd+right",
+        "command": "-cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+right",
+        "command": "cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "end",
+        "command": "-cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+up",
+        "command": "-editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "-deleteAllRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+down",
+        "command": "-editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+=",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "cmd+n",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "cmd+\\",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "cmd+n",
+        "command": "workbench.action.splitEditor"
+    },
+    {
+        "key": "cmd+\\",
+        "command": "-workbench.action.splitEditor"
+    },
+    {
+        "key": "shift+cmd+n",
+        "command": "-workbench.action.newWindow"
     },
 ]

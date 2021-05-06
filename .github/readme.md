@@ -30,3 +30,8 @@ brew bundle
 - Import btt presets
 - mos step 31.01, speed 3.66, duration 2.63, smooth scroll yes
 
+
+### iTerm2 Setup
+
+- Go to `/System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts` and open it in finder
+- Select all the fonts and open, then install to font book. This will allow sf mono to be used in iTerm2

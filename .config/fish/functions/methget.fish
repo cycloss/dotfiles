@@ -8,7 +8,8 @@ function methget -d 'Lists method sigs in file, -s for add semicolon'
     end
 
     set semicolon (set -q _flag_semicolon && echo ';' || echo '')
-    # match word optional space any number of times, then open bracket, then anything, then close bracket, then make sure that space open brace is ahead
+    # match a word (include symbols for pointers), then space word combo at least once, then open bracket, then anything, then close bracket, then anything (for throws ect), then make sure that space open brace is ahead
     # then insert semicolon variable
-    ggrep -oP '(\w+\s?)*\(.*\).*(?=\s\{)' $argv | sed "s/\$/$semicolon/"
+    set chars '[\w*\d]'
+    ggrep -oP "$chars+(\s+$chars+)+\(.*\).*(?=\s\{)" $argv | sed "s/\$/$semicolon/"
 end

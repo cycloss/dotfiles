@@ -5,6 +5,7 @@ SETUVAR --export --path CLASSPATH:\x1d
 SETUVAR --export EDITOR:nano
 SETUVAR --export JAVA_HOME:/Library/Java/JavaVirtualMachines/jdk\x2d14\x2e0\x2e2\x2ejdk/Contents/Home
 SETUVAR --export LSCOLORS:cx
+SETUVAR --export OPENER:nano
 SETUVAR --export --path PYTHONPATH:/Users/ted/Developer/Python
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_btt:open\x20/Applications/BetterTouchTool\x2eapp
@@ -12,6 +13,7 @@ SETUVAR _fish_abbr_cloud:cd\x20\x7e/Library/Mobile\x5c\x20Documents/com\x7eapple
 SETUVAR _fish_abbr_cn:code\x20/Users/ted/Documents/Notes
 SETUVAR _fish_abbr_cpg:code\x20/Users/ted/Developer/C/Playground
 SETUVAR _fish_abbr_dev:cd\x20\x7e/Developer
+SETUVAR _fish_abbr_dl:cd\x20/Users/ted/Downloads
 SETUVAR _fish_abbr_dot:git\x20\x2d\x2dgit\x2ddir\x20/Users/ted/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d/Users/ted
 SETUVAR _fish_abbr_dota:git\x20\x2d\x2dgit\x2ddir\x20/Users/ted/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d/Users/ted\x20add
 SETUVAR _fish_abbr_dots:git\x20\x2d\x2dgit\x2ddir\x20/Users/ted/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d/Users/ted\x20status
@@ -26,6 +28,8 @@ SETUVAR _fish_abbr_gs:git\x20status
 SETUVAR _fish_abbr_home:cd\x20/Users/ted/
 SETUVAR _fish_abbr_jdev:cd\x20\x7e/Developer/Java
 SETUVAR _fish_abbr_jpg:code\x20/Users/ted/Developer/Java/Playground
+SETUVAR _fish_abbr_lf:lfcd
+SETUVAR _fish_abbr_lfc:nano\x20/Users/ted/\x2econfig/lf/lfrc
 SETUVAR _fish_abbr_lsjdk:/usr/libexec/java_home\x20\x2dV
 SETUVAR _fish_abbr_notes:cd\x20/Users/ted/Documents/Notes
 SETUVAR _fish_abbr_now:date\x20\x2b\x25T
@@ -70,6 +74,8 @@ SETUVAR j11:11\x2e0\x2e9
 SETUVAR j14:14\x2e0\x2e2
 SETUVAR --export javafx:/Users/ted/Developer/Java/javafx/lib
 SETUVAR --export junit:/Users/ted/Developer/Java/junit/junit\x2dplatform\x2dconsole\x2dstandalone\x2d1\x2e6\x2e2\x2ejar
+SETUVAR --export lfDir:/Users/ted/Desktop
 SETUVAR --export libs:/usr/local/lib
 SETUVAR --export libted:/usr/local/lib/libted\x2ea
-SETUVAR --export marco:/Users/ted/Desktop
+SETUVAR --export marco:/Users/ted/Library/Application\x20Support/BetterTouchTool
+SETUVAR --export nano:\x1d

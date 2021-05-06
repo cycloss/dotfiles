@@ -17,7 +17,7 @@ function ninja --description 'Upload a file or directory to tmp.ninja'
     set -l response (curl -F files[]=@$fileUri 'https://tmp.ninja/upload.php')
 
     if test (echo $response | jq -r .success) = true
-        set uploadUrl (echo $response | jq .files[0].url)
+        set uploadUrl (echo $response | jq -r .files[0].url)
         set_color brgreen
         echo -e "\nUploaded $argv to: $uploadUrl"
         echo "Upload URL copied to clipboard"

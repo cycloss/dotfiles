@@ -1,0 +1,48 @@
+set preview true
+set shell fish
+set reverse!
+
+# sets fish variable lfDir to nothing on open
+$set -Ux lfDir ''
+
+# unmaps keys
+map d
+map n
+
+map <a-b> updir
+map <a-f> open
+map <c-w> quit
+map <enter> $$EDITOR "$f"
+map del trash
+
+
+map o $code $f
+
+map h set hidden!
+map <c-o> openCode
+
+map dt cd ~/Desktop
+map dev cd ~/Developer
+map dl cd ~/Downloads
+map ~ cd ~
+map nt cd ~/Documents/notes
+
+map m :{{
+	$set -Ux lfDir $PWD
+	quit
+}}
+
+cmd openCode ${{
+	code $f
+}}
+
+cmd trash ${{
+	if test -n $fs
+		for item in (echo $fs)
+			echo "trashing $item"
+			trash $item
+		end
+	else
+		echo 'delete selection empty'
+	end
+}}
