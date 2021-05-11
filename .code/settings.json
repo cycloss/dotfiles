@@ -260,6 +260,9 @@
     "python.showStartPage": false,
     "editor.hover.enabled": false,
     "editor.quickSuggestionsDelay": 0,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
     "code-runner.runInTerminal": true,
     "extensions.ignoreRecommendations": false,
     "code-runner.executorMap": {
@@ -337,7 +340,7 @@
         }
     ],
     "latex-workshop.view.pdf.viewer": "tab",
-    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+    "terminal.integrated.defaultProfile.osx": "/usr/local/bin/fish",
     "python.formatting.provider": "yapf",
     "sde.languageServerMode": "sourcekit-lsp",
     "python.pythonPath": "/usr/local/bin/python3",
@@ -380,7 +383,7 @@
                 },
             },
             {
-                "command": "randomeverything.email",
+                "command": "randomeverything.firstName",
             },
             {
                 "command": "type",
@@ -388,6 +391,23 @@
                     "text": "\", "
                 }
             }
+        ],
+        "randId": [
+            {
+                "command": "type",
+                "args": {
+                    "text": "\""
+                },
+            },
+            {
+                "command": "randomeverything.int",
+            },
+            // {
+            //     "command": "type",
+            //     "args": {
+            //         "text": "\", "
+            //     }
+            // }
         ],
         "lorem": [
             {

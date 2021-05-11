@@ -1,44 +1,68 @@
+# % is for 'silent' shell commands
+# $ will interrupt lf and go to shell
+# : is for lf commands
+
 set preview true
 set shell fish
 set reverse!
 
 # sets fish variable lfDir to nothing on open
-$set -Ux lfDir ''
+%set -Ux lfDir ''
 
 # unmaps keys
 map d
 map n
+map i
+map h
+map m
 
 map <a-b> updir
-map <a-f> open
+
 map <c-w> quit
 map <enter> $$EDITOR "$f"
 map del trash
+map a :{{
+	unselect
+	invert
+}}
+map i invert
+map c copy
+map x cut
+map u :{{
+	unselect
+	clear
+}}
+map v paste
 
+
+map f search
+map g search-next
 
 map oc $code $f
 # open default
 map od $open $f
+# open finder
+map of $open .
 
-map h set hidden!
-map <c-o> openCode
+map sh set hidden!
+
+# mark loads and saves bookmark a
+map ms push :mark-save<enter>a
+map ml push :mark-load<enter>a
 
 map dt cd ~/Desktop
-map dev cd ~/Developer
+map dv cd ~/Developer
+map cf cd ~/.config
 map dl cd ~/Downloads
-map ~ cd ~
+map hm cd ~
 map nt cd ~/Documents/notes
 
-map m :{{
+map mv :{{
 	$set -Ux lfDir $PWD
 	quit
 }}
 
-cmd openCode ${{
-	code $f
-}}
-
-cmd trash ${{
+cmd trash %{{
 	if test -n $fs
 		for item in (echo $fs)
 			echo "trashing $item"
@@ -48,3 +72,11 @@ cmd trash ${{
 		echo 'delete selection empty'
 	end
 }}
+
+# new directory
+cmd newdir %mkdir $argv[1]
+map nd push :newdir<space>
+
+# new file
+cmd newfile $nano $argv[1]
+map nf push :newfile<space>

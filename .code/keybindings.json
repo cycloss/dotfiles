@@ -1,6 +1,10 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
+        "key": "cmd+m",
+        "command": "macros.randId",
+    },
+    {
         "key": "cmd+2",
         "command": "workbench.action.reloadWindow",
         "when": "isDevelopment"
@@ -38,7 +42,7 @@
     {
         "key": "alt+cmd+r",
         "command": "workbench.action.debug.start",
-        "when": "editorFocus"
+        "when": "editorFocus",
     },
     {
         "key": "f5",
@@ -457,10 +461,6 @@
         "command": "workbench.action.tasks.configureDefaultBuildTask",
     },
     {
-        "key": "cmd+m",
-        "command": "macros.faker",
-    },
-    {
         "key": "alt+cmd+m",
         "command": "workbench.action.openSettingsJson"
     },
@@ -538,5 +538,5 @@
     {
         "key": "shift+cmd+n",
         "command": "-workbench.action.newWindow"
-    },
+    }
 ]

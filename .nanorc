@@ -1,4 +1,7 @@
 set nohelp true
+set linenumbers true
+set numbercolor black
+set softwrap true
 
 unbind M-B all
 bind M-B prevword all
