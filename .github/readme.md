@@ -35,3 +35,8 @@ brew bundle
 
 - Go to `/System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts` and open it in finder
 - Select all the fonts and open, then install to font book. This will allow sf mono to be used in iTerm2
+
+### Keyboard Setup
+
+- Move `CustomLayout.bundle` in .config to /Users/ted/Library/Keyboard\ Layouts and add it from keyboard prefs, input sources, add, *Others*
+- This custom layout remaps `alt+u` and `alt+o` to nothing instead of symbols so they can be used for shortcuts

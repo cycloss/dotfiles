@@ -52,7 +52,7 @@ map ml push :mark-load<enter>a
 
 map dt cd ~/Desktop
 map dv cd ~/Developer
-map cf cd ~/.config
+map dot cd ~/.config
 map dl cd ~/Downloads
 map hm cd ~
 map nt cd ~/Documents/notes
