@@ -11,8 +11,13 @@ unbind ^K main
 unbind ^U main
 unbind ^K main
 bind ^Z undo main
-bind ^k cut main
+bind ^K cut main
 unbind ^Y main
 bind ^Y paste main
 bind ^W exit all
-bind ^S writeout all
+bind ^O savefile all
+unbind ^F all
+bind ^F whereis all
+unbind ^G all
+bind ^G findnext all
+

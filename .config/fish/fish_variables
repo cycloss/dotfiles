@@ -25,12 +25,13 @@ SETUVAR _fish_abbr_funced:funced\x20\x2ds
 SETUVAR _fish_abbr_gas:git\x20add\x20\x2dA\x20\x26\x26\x20git\x20status
 SETUVAR _fish_abbr_gl:git\x20log\x20\x2d\x2dall\x20\x2d\x2ddecorate\x20\x2d\x2doneline\x20\x2d\x2dgraph
 SETUVAR _fish_abbr_gs:git\x20status
-SETUVAR _fish_abbr_home:cd\x20/Users/ted/
+SETUVAR _fish_abbr_hm:cd\x20/Users/ted/
 SETUVAR _fish_abbr_jdev:cd\x20\x7e/Developer/Java
 SETUVAR _fish_abbr_jpg:code\x20/Users/ted/Developer/Java/Playground
 SETUVAR _fish_abbr_lf:lfcd
 SETUVAR _fish_abbr_lfc:nano\x20/Users/ted/\x2econfig/lf/lfrc
 SETUVAR _fish_abbr_lsjdk:/usr/libexec/java_home\x20\x2dV
+SETUVAR _fish_abbr_mt:marktext\x20\x2dn
 SETUVAR _fish_abbr_notes:cd\x20/Users/ted/Documents/Notes
 SETUVAR _fish_abbr_now:date\x20\x2b\x25T
 SETUVAR _fish_abbr_nowtoday:date\x20\x2b\x25T\x7e\x25x

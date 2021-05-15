@@ -18,7 +18,6 @@ map m
 
 map <a-b> updir
 
-map <c-w> quit
 map <enter> $$EDITOR "$f"
 map del trash
 map a :{{
@@ -38,11 +37,16 @@ map v paste
 map f search
 map g search-next
 
+# open code
 map oc $code $f
 # open default
 map od $open $f
 # open finder
 map of $open .
+# open mark text
+map om ${{
+	marktext -n $f
+}}
 
 map sh set hidden!
 
