@@ -39,6 +39,7 @@ brew "sundials"
 brew "tldr"
 brew "trash"
 brew "tree"
+brew "wifi-password"
 brew "louisbrunner/valgrind/valgrind", args: ["HEAD"]
 cask "basictex"
 cask "bettertouchtool"

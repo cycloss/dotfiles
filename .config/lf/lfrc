@@ -60,6 +60,8 @@ map dot cd ~/.config
 map dl cd ~/Downloads
 map hm cd ~
 map nt cd ~/Documents/notes
+# directory i(cloud)
+map di cd ~/Library/Mobile\ Documents/com~apple~CloudDocs
 
 map mv :{{
 	$set -Ux lfDir $PWD

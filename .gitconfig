@@ -1,5 +1,5 @@
 [core]
-	editor = code -n --wait
+	editor = nano
 [user]
 	name = Ccyclos
 	email = 50776059+lucas979797@users.noreply.github.com

@@ -2,7 +2,7 @@
 [
     {
         "key": "cmd+m",
-        "command": "macros.randId",
+        "command": "macros.debug",
     },
     {
         "key": "cmd+2",
@@ -42,7 +42,7 @@
     {
         "key": "alt+cmd+r",
         "command": "workbench.action.debug.start",
-        "when": "editorFocus",
+        "when": "!inDebugMode",
     },
     {
         "key": "f5",
@@ -601,5 +601,15 @@
         "key": "enter",
         "command": "filesExplorer.openFilePreserveFocus",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+    },
+    {
+        "key": "alt+cmd+r",
+        "command": "workbench.action.debug.restart",
+        "when": "inDebugMode"
+    },
+    {
+        "key": "shift+cmd+f5",
+        "command": "-workbench.action.debug.restart",
+        "when": "inDebugMode"
     },
 ]

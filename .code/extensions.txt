@@ -13,13 +13,11 @@ icrawl.discord-vscode
 James-Yu.latex-workshop
 jasonlhy.hungry-delete
 jeff-hykin.macro-commander
-ms-pyright.pyright
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-vscode.cpptools
 mushan.vscode-paste-image
-oscarcs.dart-syntax-highlighting-only
 redhat.java
 shd101wyy.markdown-preview-enhanced
 tht13.html-preview-vscode

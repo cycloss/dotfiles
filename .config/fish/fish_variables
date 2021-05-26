@@ -6,9 +6,11 @@ SETUVAR --export EDITOR:nano
 SETUVAR --export JAVA_HOME:/Library/Java/JavaVirtualMachines/jdk\x2d14\x2e0\x2e2\x2ejdk/Contents/Home
 SETUVAR --export LSCOLORS:cx
 SETUVAR --export OPENER:nano
+SETUVAR --path PATH:/Users/ted/Developer/Flutter/flutter/bin\x1e/Users/ted/Developer/Java/maven/bin\x1e/Users/ted/Developer/Java\x1e/usr/local/bin\x1e/usr/bin\x1e/bin\x1e/usr/sbin\x1e/sbin\x1e/Library/Apple/usr/bin\x1e/usr/local/share/dotnet\x1e\x7e/\x2edotnet/tools\x1e/Library/Frameworks/Mono\x2eframework/Versions/Current/Commands\x1e/Library/TeX/texbin\x1etest
 SETUVAR --export --path PYTHONPATH:/Users/ted/Developer/Python
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_btt:open\x20/Applications/BetterTouchTool\x2eapp
+SETUVAR _fish_abbr_cfg:cd\x20/Users/ted/\x2econfig/
 SETUVAR _fish_abbr_cloud:cd\x20\x7e/Library/Mobile\x5c\x20Documents/com\x7eapple\x7eCloudDocs/
 SETUVAR _fish_abbr_cn:code\x20/Users/ted/Documents/Notes
 SETUVAR _fish_abbr_cpg:code\x20/Users/ted/Developer/C/Playground

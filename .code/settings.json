@@ -373,8 +373,9 @@
     "debug.showInStatusBar": "always",
     "code-runner.ignoreSelection": true,
     "dart.showSkippedTests": true,
-    "code-runner.preserveFocus": false,
     "macros": {
+        // Allows you to execute a bunch of commands in sequence, 
+        // can bind these to the cmd m macro
         "faker": [
             {
                 "command": "type",
