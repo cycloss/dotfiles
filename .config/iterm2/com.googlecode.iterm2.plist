@@ -250,22 +250,26 @@ Copy</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.56844729874911137</real>
+				<real>0.61167386147481939</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.84032905653987333</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.84817755222320557</real>
+				<real>0.64107443369735262</real>
 			</dict>
 			<key>Ansi 11 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.3333333432674408</real>
+				<real>0.5676657557</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.83893179890000003</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.84937465190000005</real>
 			</dict>
 			<key>Ansi 12 Color</key>
 			<dict>
@@ -316,13 +320,13 @@ Copy</string>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.82405692340000003</real>
+				<real>0.82408767940000005</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.93650287389999998</real>
+				<real>0.93653625250000005</real>
 				<key>Red Component</key>
-				<real>0.71733063460000002</real>
+				<real>0.71089434620000003</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
@@ -814,7 +818,7 @@ Copy</string>
 				<real>0.0</real>
 			</dict>
 			<key>Minimum Contrast</key>
-			<real>0.60135716785585258</real>
+			<real>0.47845035619129334</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>

@@ -427,5 +427,7 @@
                 }
             }
         ]
-    }
+    },
+    "terminal.external.osxExec": "iTerm.app",
+    "editor.copyWithSyntaxHighlighting": false
 }

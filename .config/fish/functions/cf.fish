@@ -1,4 +1,4 @@
-function fcpy --description 'Copies file contents to clipboard'
+function cf --description 'Copies file contents to clipboard'
     # grep -c counts occurences of pattern
     set -l textCount (file "$argv"|grep -c 'text')
     if test $textCount -ge 1

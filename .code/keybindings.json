@@ -97,10 +97,6 @@
         "when": "searchViewletFocus"
     },
     {
-        "key": "alt+s",
-        "command": "code-runner.stop"
-    },
-    {
         "key": "ctrl+alt+m",
         "command": "-code-runner.stop"
     },
@@ -612,4 +608,32 @@
         "command": "-workbench.action.debug.restart",
         "when": "inDebugMode"
     },
+    {
+        "key": "alt+i",
+        "command": "cursorMove",
+        "args": {
+            "to": "up",
+            "by": "line",
+            "value": 5
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "cursorMove",
+        "args": {
+            "to": "down",
+            "by": "line",
+            "value": 5
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            // sends unicode 3, ctrl + c
+            "text": "\u0003"
+        }
+    }
 ]

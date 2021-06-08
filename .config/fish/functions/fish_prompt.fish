@@ -1,5 +1,4 @@
-# Defined interactively
-function fish_prompt
+function fish_prompt -d 'Fish prompt customisations'
     set -l last_command_status $status
     set -l cwd
 

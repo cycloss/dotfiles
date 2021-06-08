@@ -11,7 +11,6 @@ SETUVAR --export --path PYTHONPATH:/Users/ted/Developer/Python
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_btt:open\x20/Applications/BetterTouchTool\x2eapp
 SETUVAR _fish_abbr_cfg:cd\x20/Users/ted/\x2econfig/
-SETUVAR _fish_abbr_cloud:cd\x20\x7e/Library/Mobile\x5c\x20Documents/com\x7eapple\x7eCloudDocs/
 SETUVAR _fish_abbr_cn:code\x20/Users/ted/Documents/Notes
 SETUVAR _fish_abbr_cpg:code\x20/Users/ted/Developer/C/Playground
 SETUVAR _fish_abbr_dev:cd\x20\x7e/Developer
@@ -25,9 +24,12 @@ SETUVAR _fish_abbr_dt:cd\x20\x24HOME/Desktop
 SETUVAR _fish_abbr_fpg:code\x20/Users/ted/Developer/Fish/FishPlayground
 SETUVAR _fish_abbr_funced:funced\x20\x2ds
 SETUVAR _fish_abbr_gas:git\x20add\x20\x2dA\x20\x26\x26\x20git\x20status
+SETUVAR _fish_abbr_gc:git\x20commit\x20\x2dm
+SETUVAR _fish_abbr_ghtest:cd\x20\x7e/Developer/General/GitTest
 SETUVAR _fish_abbr_gl:git\x20log\x20\x2d\x2dall\x20\x2d\x2ddecorate\x20\x2d\x2doneline\x20\x2d\x2dgraph
 SETUVAR _fish_abbr_gs:git\x20status
 SETUVAR _fish_abbr_hm:cd\x20/Users/ted/
+SETUVAR _fish_abbr_icloud:cd\x20\x7e/Library/Mobile\x5c\x20Documents/com\x7eapple\x7eCloudDocs/
 SETUVAR _fish_abbr_jdev:cd\x20\x7e/Developer/Java
 SETUVAR _fish_abbr_jpg:code\x20/Users/ted/Developer/Java/Playground
 SETUVAR _fish_abbr_lf:lfcd

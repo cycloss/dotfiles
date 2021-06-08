@@ -5,6 +5,7 @@
 set preview true
 set shell fish
 set reverse!
+set promptfmt '%w'
 
 # sets fish variable lfDir to nothing on open
 %set -Ux lfDir ''
