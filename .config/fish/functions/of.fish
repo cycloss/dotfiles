@@ -1,4 +1,4 @@
-function f -d "Open directory in Finder"
+function of -d "Open directory in Finder"
     if test -z $argv[1]
         open .
     else

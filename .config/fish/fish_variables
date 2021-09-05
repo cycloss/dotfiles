@@ -1,46 +1,49 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR ANDROID_SDK_ROOT:/Users/ted/android_sdk/cmdline\x2dtools/version/bin\x1e/Users/ted/Developer/Flutter/cmdline\x2dtools/lateset/bin
+SETUVAR ANDROID_SDK_ROOT:\x7e/android_sdk/cmdline\x2dtools/version/bin\x1e\x7e/Developer/Flutter/cmdline\x2dtools/lateset/bin
 SETUVAR --export --path CLASSPATH:\x1d
 SETUVAR --export EDITOR:nano
 SETUVAR --export JAVA_HOME:/Library/Java/JavaVirtualMachines/jdk\x2d14\x2e0\x2e2\x2ejdk/Contents/Home
 SETUVAR --export LSCOLORS:cx
 SETUVAR --export OPENER:nano
-SETUVAR --path PATH:/Users/ted/Developer/Flutter/flutter/bin\x1e/Users/ted/Developer/Java/maven/bin\x1e/Users/ted/Developer/Java\x1e/usr/local/bin\x1e/usr/bin\x1e/bin\x1e/usr/sbin\x1e/sbin\x1e/Library/Apple/usr/bin\x1e/usr/local/share/dotnet\x1e\x7e/\x2edotnet/tools\x1e/Library/Frameworks/Mono\x2eframework/Versions/Current/Commands\x1e/Library/TeX/texbin\x1etest
-SETUVAR --export --path PYTHONPATH:/Users/ted/Developer/Python
+SETUVAR --path PATH:\x7e/Developer/Flutter/flutter/bin\x1e\x7e/Developer/Java/maven/bin\x1e\x7e/Developer/Java\x1e/usr/local/bin\x1e/usr/bin\x1e/bin\x1e/usr/sbin\x1e/sbin\x1e/Library/Apple/usr/bin\x1e/usr/local/share/dotnet\x1e\x7e/\x2edotnet/tools\x1e/Library/Frameworks/Mono\x2eframework/Versions/Current/Commands\x1e/Library/TeX/texbin\x1etest
+SETUVAR --export --path PYTHONPATH:\x7e/Developer/Python
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_btt:open\x20/Applications/BetterTouchTool\x2eapp
-SETUVAR _fish_abbr_cfg:cd\x20/Users/ted/\x2econfig/
-SETUVAR _fish_abbr_cn:code\x20/Users/ted/Documents/Notes
-SETUVAR _fish_abbr_cpg:code\x20/Users/ted/Developer/C/Playground
+SETUVAR _fish_abbr_cfg:cd\x20\x7e/\x2econfig/
+SETUVAR _fish_abbr_cn:code\x20\x7e/Documents/Notes
+SETUVAR _fish_abbr_cpg:code\x20\x7e/Developer/C/Playground
 SETUVAR _fish_abbr_dev:cd\x20\x7e/Developer
-SETUVAR _fish_abbr_dl:cd\x20/Users/ted/Downloads
-SETUVAR _fish_abbr_dot:git\x20\x2d\x2dgit\x2ddir\x20/Users/ted/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d/Users/ted
-SETUVAR _fish_abbr_dota:git\x20\x2d\x2dgit\x2ddir\x20/Users/ted/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d/Users/ted\x20add
-SETUVAR _fish_abbr_dots:git\x20\x2d\x2dgit\x2ddir\x20/Users/ted/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d/Users/ted\x20status
-SETUVAR _fish_abbr_dotu:git\x20\x2d\x2dgit\x2ddir\x20/Users/ted/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d/Users/ted\x20add\x20\x2du
-SETUVAR _fish_abbr_dpg:code\x20/Users/ted/Developer/Flutter/DartPlayground/
+SETUVAR _fish_abbr_dl:cd\x20\x7e/Downloads
+SETUVAR _fish_abbr_dot:git\x20\x2d\x2dgit\x2ddir\x20\x7e/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME
+SETUVAR _fish_abbr_dotas:git\x20\x2d\x2dgit\x2ddir\x20\x7e/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20add\x20\x2du\x20\x24HOME/\x2econfig/fish\x20\x26\x26\x20git\x20\x20\x2d\x2dgit\x2ddir\x20\x7e/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20status
+SETUVAR _fish_abbr_dots:git\x20\x2d\x2dgit\x2ddir\x20\x7e/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20status
+SETUVAR _fish_abbr_dotu:git\x20\x2d\x2dgit\x2ddir\x20\x7e/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20add\x20\x2du
+SETUVAR _fish_abbr_dpg:code\x20\x7e/Developer/Flutter/DartPlayground/
 SETUVAR _fish_abbr_dt:cd\x20\x24HOME/Desktop
-SETUVAR _fish_abbr_fpg:code\x20/Users/ted/Developer/Fish/FishPlayground
+SETUVAR _fish_abbr_fpg:code\x20\x7e/Developer/Fish/FishPlayground
 SETUVAR _fish_abbr_funced:funced\x20\x2ds
 SETUVAR _fish_abbr_gas:git\x20add\x20\x2dA\x20\x26\x26\x20git\x20status
 SETUVAR _fish_abbr_gc:git\x20commit\x20\x2dm
 SETUVAR _fish_abbr_ghtest:cd\x20\x7e/Developer/General/GitTest
 SETUVAR _fish_abbr_gl:git\x20log\x20\x2d\x2dall\x20\x2d\x2ddecorate\x20\x2d\x2doneline\x20\x2d\x2dgraph
 SETUVAR _fish_abbr_gs:git\x20status
-SETUVAR _fish_abbr_hm:cd\x20/Users/ted/
+SETUVAR _fish_abbr_hm:cd\x20\x7e/
 SETUVAR _fish_abbr_icloud:cd\x20\x7e/Library/Mobile\x5c\x20Documents/com\x7eapple\x7eCloudDocs/
 SETUVAR _fish_abbr_jdev:cd\x20\x7e/Developer/Java
-SETUVAR _fish_abbr_jpg:code\x20/Users/ted/Developer/Java/Playground
+SETUVAR _fish_abbr_jpg:code\x20\x7e/Developer/Java/Playground
 SETUVAR _fish_abbr_lf:lfcd
-SETUVAR _fish_abbr_lfc:nano\x20/Users/ted/\x2econfig/lf/lfrc
+SETUVAR _fish_abbr_lfc:nano\x20\x7e/\x2econfig/lf/lfrc
 SETUVAR _fish_abbr_lsjdk:/usr/libexec/java_home\x20\x2dV
 SETUVAR _fish_abbr_mt:marktext\x20\x2dn
-SETUVAR _fish_abbr_notes:cd\x20/Users/ted/Documents/Notes
+SETUVAR _fish_abbr_notes:cd\x20\x7e/Documents/Notes
 SETUVAR _fish_abbr_now:date\x20\x2b\x25T
 SETUVAR _fish_abbr_nowtoday:date\x20\x2b\x25T\x7e\x25x
-SETUVAR _fish_abbr_pchal:code\x20/Users/ted/Developer/Python/Challenges
-SETUVAR _fish_abbr_ppg:code\x20/Users/ted/Developer/Python/Playground
+SETUVAR _fish_abbr_oh:nano\x20\x7e/\x2elocal/share/fish/fish_history
+SETUVAR _fish_abbr_pchal:code\x20\x7e/Developer/Python/Challenges
+SETUVAR _fish_abbr_ppg:code\x20\x7e/Developer/Python/Playground
+SETUVAR _fish_abbr_proj:git\x20\x2d\x2dgit\x2ddir\x20\x7e/Developer/Flutter/msc\x2dproject\x20\x2d\x2dwork\x2dtree\x20\x7e/Developer/Flutter
+SETUVAR _fish_abbr_sl:eval\x20\x22sudo\x20\x24history\x5b1\x5d\x22
 SETUVAR _fish_abbr_tocgen:gh\x2dmd\x2dtoc
 SETUVAR _fish_abbr_today:date\x20\x2b\x25x
 SETUVAR fish_color_autosuggestion:4c566a
@@ -72,15 +75,15 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:/Users/ted/Developer/Flutter/flutter/bin\x1e/Users/ted/Developer/Java/maven/bin\x1e/Users/ted/Developer/Java
+SETUVAR fish_user_paths:/usr/local/opt/ruby\x402\x2e7/bin\x1e\x7e/Developer/Flutter/flutter/bin\x1e\x7e/Developer/Java/maven/bin\x1e\x7e/Developer/Java
 SETUVAR --export headers:/usr/local/include
 SETUVAR --export hted:/usr/local/include/ted\x2eh
 SETUVAR j11:11\x2e0\x2e9
 SETUVAR j14:14\x2e0\x2e2
-SETUVAR --export javafx:/Users/ted/Developer/Java/javafx/lib
-SETUVAR --export junit:/Users/ted/Developer/Java/junit/junit\x2dplatform\x2dconsole\x2dstandalone\x2d1\x2e6\x2e2\x2ejar
+SETUVAR --export javafx:\x7e/Developer/Java/javafx/lib
+SETUVAR --export junit:\x7e/Developer/Java/junit/junit\x2dplatform\x2dconsole\x2dstandalone\x2d1\x2e6\x2e2\x2ejar
 SETUVAR --export lfDir:
 SETUVAR --export libs:/usr/local/lib
 SETUVAR --export libted:/usr/local/lib/libted\x2ea
-SETUVAR --export marco:/Users/ted/Developer/Java/SW2Project
+SETUVAR --export marco:/Users/ted/Documents/Notes/University/SummerProject/Report
 SETUVAR --export nano:\x1d

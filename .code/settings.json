@@ -17,37 +17,17 @@
     "workbench.colorCustomizations": {},
     "todohighlight.keywords": [
         {
-            "text": "(",
-            "color": "#D4D4D4",
-            "backgroundColor": "#FF000000",
-        },
-        {
-            "text": ")",
-            "color": "#D4D4D4",
-            "backgroundColor": "#FF000000",
-        },
-        {
-            "text": "{",
-            "color": "#D4D4D4",
-            "backgroundColor": "#FF000000",
-        },
-        {
-            "text": "}",
-            "color": "#D4D4D4",
-            "backgroundColor": "#FF000000",
-        },
-        {
-            "text": "]",
-            "color": "#D4D4D4",
-            "backgroundColor": "#FF000000",
-        },
-        {
-            "text": "[",
-            "color": "#D4D4D4",
-            "backgroundColor": "#FF000000",
-        },
-        {
             "text": "void",
+            "color": "#FB649F",
+            "backgroundColor": "#FF000000",
+        },
+        {
+            "text": "TODO",
+            "color": "#1E1E1E",
+            "backgroundColor": "#D4D4D4",
+        },
+        {
+            "text": "override",
             "color": "#FB649F",
             "backgroundColor": "#FF000000",
         },
@@ -131,12 +111,6 @@
                 }
             },
             {
-                "scope": "source.dart",
-                "settings": {
-                    "foreground": "#7ebdb3"
-                }
-            },
-            {
                 "scope": "punctuation.definition.string.end",
                 "settings": {
                     "foreground": "#79a070"
@@ -207,15 +181,29 @@
                 "settings": {
                     "foreground": "#FB649F"
                 }
-            }
+            },
         ]
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "rules": {
+            "keyword": "#FB649F",
+            "annotation": "#FB649F",
+            "parameter.label": "#D4D4D4",
+            "string": "#79a070",
+            "comment": "#59965B",
+            "class": "#2AD7FC",
+            "struct": "#2AD7FC",
+            "method": "#FFC677",
+            "variable": "#7ebdb3",
+            "property": "#7ebdb3",
+            "number": "#8684dc",
+        }
     },
     "editor.fontSize": 14,
     "editor.lineHeight": 24,
     "editor.hover.delay": 100,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
-    "maven.executable.path": "/Users/ted/Developer/Java/maven/bin/mvn",
     "java.project.importOnFirstTimeStartup": "automatic",
     "python.defaultInterpreterPath": "/usr/local/bin/python3",
     "editor.codeLens": false,
@@ -251,7 +239,17 @@
                 "program": "${file}",
                 "console": "integratedTerminal",
                 "python": "${command:python.interpreterPath}"
-            }
+            },
+            {
+                "name": "debug app default",
+                "request": "attach",
+                "type": "dart",
+                "deviceId": "51ABDF9C-C54D-4811-BBDA-E733639AEC51",
+                "args": [
+                    "--app-id",
+                    "com.example.myAppName"
+                ]
+            },
         ],
         "compounds": []
     },
@@ -333,12 +331,9 @@
     "discord.detailsDebugging": "Debugging a {lang} file",
     "omnisharp.useGlobalMono": "always",
     "java.refactor.renameFromFileExplorer": "preview",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "latex-workshop.view.pdf.viewer": "tab",
     "terminal.integrated.defaultProfile.osx": "/usr/local/bin/fish",
     "python.formatting.provider": "yapf",
@@ -352,7 +347,6 @@
     "java.test.config": {
         "workingDirectory": "${workspaceFolder}"
     },
-    "workbench.statusBar.visible": false,
     "code-runner.saveFileBeforeRun": true,
     "code-runner.showRunIconInEditorTitleMenu": false,
     "sourcekit-lsp.serverPath": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
@@ -429,5 +423,20 @@
         ]
     },
     "terminal.external.osxExec": "iTerm.app",
-    "editor.copyWithSyntaxHighlighting": false
+    "editor.copyWithSyntaxHighlighting": false,
+    "security.workspace.trust.enabled": false,
+    "remoteHub.autoFetch.enabled": false,
+    "workbench.statusBar.visible": false,
+    "solargraph.formatting": true,
+    "ruby.format": "rubocop",
+    "[ruby]": {
+        "editor.defaultFormatter": "misogi.ruby-rubocop"
+    },
+    "solargraph.diagnostics": true,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "solargraph.useBundler": true,
+    "ruby.interpreter.commandPath": "/usr/local/opt/ruby@2.7/bin/ruby",
+    "editor.semanticHighlighting.enabled": true,
 }
