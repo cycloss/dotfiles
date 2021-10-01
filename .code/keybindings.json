@@ -659,5 +659,9 @@
     {
         "key": "alt+f",
         "command": "editor.debug.action.goToNextBreakpoint"
+    },
+    {
+        "key": "cmd+0",
+        "command": "-workbench.action.focusSideBar"
     }
 ]

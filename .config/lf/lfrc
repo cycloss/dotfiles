@@ -82,8 +82,8 @@ cmd trash %{{
 
 # new directory
 cmd newdir %mkdir $argv[1]
-map nd push :newdir<space>
+map md push :newdir<space>
 
 # new file
 cmd newfile $nano $argv[1]
-map nf push :newfile<space>
+map mf push :newfile<space>

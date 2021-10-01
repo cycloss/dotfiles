@@ -17,11 +17,6 @@
     "workbench.colorCustomizations": {},
     "todohighlight.keywords": [
         {
-            "text": "void",
-            "color": "#FB649F",
-            "backgroundColor": "#FF000000",
-        },
-        {
             "text": "TODO",
             "color": "#1E1E1E",
             "backgroundColor": "#D4D4D4",
@@ -182,6 +177,18 @@
                     "foreground": "#FB649F"
                 }
             },
+            {
+                "scope": "keyword",
+                "settings": {
+                    "foreground": "#FB649F"
+                }
+            },
+            {
+                "scope": "keyword.function.go",
+                "settings": {
+                    "foreground": "#FB649F"
+                }
+            }
         ]
     },
     "editor.semanticTokenColorCustomizations": {
@@ -193,6 +200,7 @@
             "comment": "#59965B",
             "class": "#2AD7FC",
             "struct": "#2AD7FC",
+            "namespace": "#2AD7FC",
             "method": "#FFC677",
             "variable": "#7ebdb3",
             "property": "#7ebdb3",
@@ -439,4 +447,17 @@
     "solargraph.useBundler": true,
     "ruby.interpreter.commandPath": "/usr/local/opt/ruby@2.7/bin/ruby",
     "editor.semanticHighlighting.enabled": true,
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.semanticHighlighting.enabled": true
+    },
+    "gopls": {
+        "ui.semanticTokens": true
+    },
+    "salesforcedx-vscode-apex.java.home": "/Library/Java/JavaVirtualMachines/jdk-11.0.9.jdk/Contents/Home"
 }

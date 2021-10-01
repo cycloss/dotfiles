@@ -3,6 +3,7 @@
 SETUVAR ANDROID_SDK_ROOT:\x7e/android_sdk/cmdline\x2dtools/version/bin\x1e\x7e/Developer/Flutter/cmdline\x2dtools/lateset/bin
 SETUVAR --export --path CLASSPATH:\x1d
 SETUVAR --export EDITOR:nano
+SETUVAR --export --path GOPATH:/Users/ted/go
 SETUVAR --export JAVA_HOME:/Library/Java/JavaVirtualMachines/jdk\x2d14\x2e0\x2e2\x2ejdk/Contents/Home
 SETUVAR --export LSCOLORS:cx
 SETUVAR --export OPENER:nano
@@ -13,14 +14,21 @@ SETUVAR _fish_abbr_btt:open\x20/Applications/BetterTouchTool\x2eapp
 SETUVAR _fish_abbr_cfg:cd\x20\x7e/\x2econfig/
 SETUVAR _fish_abbr_cn:code\x20\x7e/Documents/Notes
 SETUVAR _fish_abbr_cpg:code\x20\x7e/Developer/C/Playground
-SETUVAR _fish_abbr_dev:cd\x20\x7e/Developer
+SETUVAR _fish_abbr_dcd:docker\x20compose\x20down
+SETUVAR _fish_abbr_dcls:docker\x20container\x20ls
+SETUVAR _fish_abbr_dcr:docker\x20compose\x20down\x20\x26\x26\x20docker\x20compose\x20up\x20\x2dd
+SETUVAR _fish_abbr_dcrb:docker\x20compose\x20build\x20\x26\x26\x20docker\x20compose\x20up\x20\x2dd
+SETUVAR _fish_abbr_dcu:docker\x20compose\x20up\x20\x2dd
+SETUVAR _fish_abbr_dils:docker\x20image\x20ls
 SETUVAR _fish_abbr_dl:cd\x20\x7e/Downloads
 SETUVAR _fish_abbr_dot:git\x20\x2d\x2dgit\x2ddir\x20\x7e/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME
 SETUVAR _fish_abbr_dotas:git\x20\x2d\x2dgit\x2ddir\x20\x7e/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20add\x20\x2du\x20\x24HOME/\x2econfig/fish\x20\x26\x26\x20git\x20\x20\x2d\x2dgit\x2ddir\x20\x7e/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20status
 SETUVAR _fish_abbr_dots:git\x20\x2d\x2dgit\x2ddir\x20\x7e/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20status
 SETUVAR _fish_abbr_dotu:git\x20\x2d\x2dgit\x2ddir\x20\x7e/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20add\x20\x2du
 SETUVAR _fish_abbr_dpg:code\x20\x7e/Developer/Flutter/DartPlayground/
+SETUVAR _fish_abbr_dps:docker\x20ps
 SETUVAR _fish_abbr_dt:cd\x20\x24HOME/Desktop
+SETUVAR _fish_abbr_dv:cd\x20\x7e/Developer
 SETUVAR _fish_abbr_fpg:code\x20\x7e/Developer/Fish/FishPlayground
 SETUVAR _fish_abbr_funced:funced\x20\x2ds
 SETUVAR _fish_abbr_gas:git\x20add\x20\x2dA\x20\x26\x26\x20git\x20status
