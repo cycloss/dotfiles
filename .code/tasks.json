@@ -1,0 +1,10 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build current file only",
+            "command": "go build -o bin ${fileBasename}", // Could be any other shell command
+            "type": "shell"
+        }
+    ]
+}

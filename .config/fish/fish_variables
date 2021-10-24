@@ -4,10 +4,11 @@ SETUVAR ANDROID_SDK_ROOT:\x7e/android_sdk/cmdline\x2dtools/version/bin\x1e\x7e/D
 SETUVAR --export --path CLASSPATH:\x1d
 SETUVAR --export EDITOR:nano
 SETUVAR --export --path GOPATH:/Users/ted/go
+SETUVAR --export GOPRIVATE:github\x2ecom/Wessex\x2dInternet/\x2a
 SETUVAR --export JAVA_HOME:/Library/Java/JavaVirtualMachines/jdk\x2d14\x2e0\x2e2\x2ejdk/Contents/Home
 SETUVAR --export LSCOLORS:cx
 SETUVAR --export OPENER:nano
-SETUVAR --path PATH:\x7e/Developer/Flutter/flutter/bin\x1e\x7e/Developer/Java/maven/bin\x1e\x7e/Developer/Java\x1e/usr/local/bin\x1e/usr/bin\x1e/bin\x1e/usr/sbin\x1e/sbin\x1e/Library/Apple/usr/bin\x1e/usr/local/share/dotnet\x1e\x7e/\x2edotnet/tools\x1e/Library/Frameworks/Mono\x2eframework/Versions/Current/Commands\x1e/Library/TeX/texbin\x1etest
+SETUVAR --path PATH:/usr/local/opt/ruby\x402\x2e7/bin\x1e\x7e/Developer/Flutter/flutter/bin\x1e\x7e/Developer/Java/maven/bin\x1e\x7e/Developer/Java\x1e/usr/local/bin\x1e/usr/bin\x1e/bin\x1e/usr/sbin\x1e/sbin\x1e/Library/Apple/usr/bin\x1e/usr/local/share/dotnet\x1e\x7e/\x2edotnet/tools\x1e/Library/Frameworks/Mono\x2eframework/Versions/Current/Commands\x1e/Library/TeX/texbin\x1e/Users/ted/Developer/Fish/ani\x2dcli
 SETUVAR --export --path PYTHONPATH:\x7e/Developer/Python
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_btt:open\x20/Applications/BetterTouchTool\x2eapp
@@ -16,15 +17,18 @@ SETUVAR _fish_abbr_cn:code\x20\x7e/Documents/Notes
 SETUVAR _fish_abbr_cpg:code\x20\x7e/Developer/C/Playground
 SETUVAR _fish_abbr_dcd:docker\x20compose\x20down
 SETUVAR _fish_abbr_dcls:docker\x20container\x20ls
+SETUVAR _fish_abbr_dcp:docker\x20container\x20prune
 SETUVAR _fish_abbr_dcr:docker\x20compose\x20down\x20\x26\x26\x20docker\x20compose\x20up\x20\x2dd
-SETUVAR _fish_abbr_dcrb:docker\x20compose\x20build\x20\x26\x26\x20docker\x20compose\x20up\x20\x2dd
+SETUVAR _fish_abbr_dcrb:docker\x20compose\x20down\x20\x26\x26\x20docker\x20compose\x20build\x20\x26\x26\x20docker\x20compose\x20up\x20\x2dd
 SETUVAR _fish_abbr_dcu:docker\x20compose\x20up\x20\x2dd
 SETUVAR _fish_abbr_dils:docker\x20image\x20ls
+SETUVAR _fish_abbr_dip:docker\x20image\x20prune\x20\x2da
 SETUVAR _fish_abbr_dl:cd\x20\x7e/Downloads
 SETUVAR _fish_abbr_dot:git\x20\x2d\x2dgit\x2ddir\x20\x7e/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME
 SETUVAR _fish_abbr_dotas:git\x20\x2d\x2dgit\x2ddir\x20\x7e/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20add\x20\x2du\x20\x24HOME/\x2econfig/fish\x20\x26\x26\x20git\x20\x20\x2d\x2dgit\x2ddir\x20\x7e/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20status
 SETUVAR _fish_abbr_dots:git\x20\x2d\x2dgit\x2ddir\x20\x7e/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20status
 SETUVAR _fish_abbr_dotu:git\x20\x2d\x2dgit\x2ddir\x20\x7e/Dotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20add\x20\x2du
+SETUVAR _fish_abbr_dpa:docker\x20container\x20prune\x20\x26\x26\x20docker\x20image\x20prune\x20\x2da
 SETUVAR _fish_abbr_dpg:code\x20\x7e/Developer/Flutter/DartPlayground/
 SETUVAR _fish_abbr_dps:docker\x20ps
 SETUVAR _fish_abbr_dt:cd\x20\x24HOME/Desktop
@@ -35,6 +39,7 @@ SETUVAR _fish_abbr_gas:git\x20add\x20\x2dA\x20\x26\x26\x20git\x20status
 SETUVAR _fish_abbr_gc:git\x20commit\x20\x2dm
 SETUVAR _fish_abbr_ghtest:cd\x20\x7e/Developer/General/GitTest
 SETUVAR _fish_abbr_gl:git\x20log\x20\x2d\x2dall\x20\x2d\x2ddecorate\x20\x2d\x2doneline\x20\x2d\x2dgraph
+SETUVAR _fish_abbr_gpg:code\x20\x7e/Developer/Go/playground
 SETUVAR _fish_abbr_gs:git\x20status
 SETUVAR _fish_abbr_hm:cd\x20\x7e/
 SETUVAR _fish_abbr_icloud:cd\x20\x7e/Library/Mobile\x5c\x20Documents/com\x7eapple\x7eCloudDocs/

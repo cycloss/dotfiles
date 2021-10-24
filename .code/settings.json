@@ -188,6 +188,12 @@
                 "settings": {
                     "foreground": "#FB649F"
                 }
+            },
+            {
+                "scope": "entity.name.function.go",
+                "settings": {
+                    "foreground": "#FFC677"
+                }
             }
         ]
     },
@@ -258,6 +264,15 @@
                     "com.example.myAppName"
                 ]
             },
+            // used for debugging
+            {
+                "name": "Debug single go file",
+                "type": "go",
+                "request": "launch",
+                "mode": "exec",
+                "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+                "preLaunchTask": "build current file only"
+            }
         ],
         "compounds": []
     },
@@ -459,5 +474,6 @@
     "gopls": {
         "ui.semanticTokens": true
     },
-    "salesforcedx-vscode-apex.java.home": "/Library/Java/JavaVirtualMachines/jdk-11.0.9.jdk/Contents/Home"
+    "salesforcedx-vscode-apex.java.home": "/Library/Java/JavaVirtualMachines/jdk-11.0.9.jdk/Contents/Home",
+    "go.toolsManagement.autoUpdate": true
 }

@@ -1,3 +1,3 @@
 function hs -d 'Search history'
-    history | grep $argv
+    history -R | grep $argv
 end
