@@ -4,13 +4,13 @@ function dotupd --description 'Loads new files and adds all changes to dotfile r
     cp "$HOME/Library/Application Support/Code/User/settings.json" "$HOME/.code"
     cp "$HOME/Library/Application Support/Code/User/tasks.json" "$HOME/.code"
     cp "$HOME/Library/Application Support/Code/User/keybindings.json" "$HOME/.code"
-    git --git-dir $HOME/Dotfiles/ --work-tree=$HOME add -A "$HOME/.code"
+    git --git-dir $HOME/.dotfiles/ --work-tree=$HOME add -A "$HOME/.code"
     echo 'Saved vscode files...'
     brew bundle dump -f --file=$HOME/.brewfile
     echo 'Saved brewfile...'
-    git --git-dir $HOME/Dotfiles/ --work-tree=$HOME add -A $HOME/.config/fish
+    git --git-dir $HOME/.dotfiles/ --work-tree=$HOME add -A $HOME/.config/fish
     echo 'Saved new fish files...'
-    git --git-dir $HOME/Dotfiles/ --work-tree=$HOME add -u
+    git --git-dir $HOME/.dotfiles/ --work-tree=$HOME add -u
     echo 'Updated dotfile repo...'
-    git --git-dir $HOME/Dotfiles/ --work-tree=$HOME status
+    git --git-dir $HOME/.dotfiles/ --work-tree=$HOME status
 end
