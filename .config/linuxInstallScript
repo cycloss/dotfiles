@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# install lf for linux
+wget https://github.com/gokcehan/lf/releases/download/r6/lf-linux-amd64.tar.gz \
+-O lf-linux-amd64.tar.gz
+tar xvf lf-linux-amd64.tar.gz
+chmod +x lf
+mv lf /usr/local/bin
+rm lf-linux-amd64.tar.gz
+
+# install fish for linux
+apt-get install fish
+chsh -s /usr/bin/fish

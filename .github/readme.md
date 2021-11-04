@@ -2,34 +2,42 @@
 
 ### File setup
 
-- Install homebrew
-- Clone this repo into home
-- Delete .git/ in home
-- Setup bare repo with:
+Within the home directory, to create a bare repo in `.dotfiles/` (doesn't need to exist) run:
 
 ```shell
-mkdir $HOME/.dotfiles && git init --bare $HOME/.dotfiles
+git clone --bare https://github.com/cycloss/dotfiles.git ~/.dotfiles
 ```
 
-- Add all dotfiles ect into the bare repo. Example:
+Then to place all dotfiles in home run:
 
 ```shell
-git --git-dir $HOME/.dotfiles/ --work-tree=$HOME add fileName.ext
+git --git-dir ~/.dotfiles/ --work-tree=$HOME checkout
 ```
 
-### Program setup
+## Linux
+
+Make sure it has executable permissions and run the install script as root `sudo ~/.config/linuxInstallScript`. This will install `fish`, and `lf`.
+
+### Macos
+
+Install brew with:
+
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
 - Rename .brewfile to Brewfile
 - Run the following to install brews:
-```
+
+```shell
 brew bundle
 ```
+
 - Add vscode, karabiner, btt and mos to brew
 - Place vscode and karabiner configs where they should be
 - Install vscode extensions
 - Import btt presets
 - mos step 31.01, speed 3.66, duration 2.63, smooth scroll yes
-
 
 ### iTerm2 Setup
 
