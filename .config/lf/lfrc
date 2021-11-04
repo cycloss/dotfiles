@@ -18,6 +18,8 @@ map h
 map m
 
 map <a-b> updir
+map D updir
+map C open
 
 map <enter> $$EDITOR "$f"
 map del trash
