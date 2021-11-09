@@ -1,8 +1,9 @@
 [core]
 	editor = nano
 [user]
-	name = Ccyclos
+	name = Ted
 	email = 50776059+lucas979797@users.noreply.github.com
+	username = cycloss
 [merge]
     	tool = vscode
 [mergetool "vscode"]

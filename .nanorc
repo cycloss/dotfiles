@@ -3,6 +3,8 @@ set linenumbers true
 set numbercolor black
 set softwrap true
 
+# M is modifier which on macos is esc
+
 unbind M-B all
 bind M-B prevword all
 unbind M-F all

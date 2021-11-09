@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# ENSURE THIS SCRIPT IS RUN WITH ROOT PERMS
+
 # install lf for linux
 wget https://github.com/gokcehan/lf/releases/download/r6/lf-linux-amd64.tar.gz \
 -O lf-linux-amd64.tar.gz
@@ -9,5 +11,24 @@ mv lf /usr/local/bin
 rm lf-linux-amd64.tar.gz
 
 # install fish for linux
-apt-get install fish
-chsh -s /usr/bin/fish
+apt install fish
+chsh -s $(which fish) $(whoami)
+
+# install omf for showing git repo status'
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+
+# install trash
+apt install trash-cli
+
+# install ctop for containers
+echo "deb http://packages.azlux.fr/debian/ buster main" | sudo tee /etc/apt/sources.list.d/azlux.list
+wget -qO - https://azlux.fr/repo.gpg.key | sudo apt-key add -
+apt update
+apt install docker-ctop
+
+# install tldr
+apt install tldr
+tldr -u
+
+# install ufw for firewall management
+apt install ufw

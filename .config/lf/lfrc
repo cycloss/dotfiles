@@ -7,6 +7,9 @@ set shell fish
 set reverse!
 set promptfmt '%w'
 
+# show hidden by default
+set hidden
+
 # sets fish variable lfDir to nothing on open
 %set -Ux lfDir ''
 

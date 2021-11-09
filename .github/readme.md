@@ -1,8 +1,8 @@
 # My dotfiles
 
-### File setup
+## Repo setup
 
-Within the home directory, to create a bare repo in `.dotfiles/` (doesn't need to exist) run:
+Within the home directory, to create a bare repo in `.dotfiles/` (doesn't need to exist) and clone this repo run:
 
 ```shell
 git clone --bare https://github.com/cycloss/dotfiles.git ~/.dotfiles
@@ -14,11 +14,13 @@ Then to place all dotfiles in home run:
 git --git-dir ~/.dotfiles/ --work-tree=$HOME checkout
 ```
 
-## Linux
+## Linux Install
 
-Make sure it has executable permissions and run the install script as root `sudo ~/.config/linuxInstallScript`. This will install `fish`, and `lf`.
+The linux installation is light weight compared to that of macos.
 
-### Macos
+Make sure it has executable permissions and run the install script as root `sudo ~/.config/linuxInstallScript`. This will install `fish`, `lf`, and `trash`.
+
+## Macos Install
 
 Install brew with:
 
