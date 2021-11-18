@@ -15,6 +15,7 @@ SETUVAR _fish_abbr_btt:open\x20/Applications/BetterTouchTool\x2eapp
 SETUVAR _fish_abbr_cfg:cd\x20\x7e/\x2econfig/
 SETUVAR _fish_abbr_cn:code\x20\x7e/Documents/Notes
 SETUVAR _fish_abbr_cpg:code\x20\x7e/Developer/C/Playground
+SETUVAR _fish_abbr_dcb:docker\x20compose\x20build
 SETUVAR _fish_abbr_dcd:docker\x20compose\x20down
 SETUVAR _fish_abbr_dcls:docker\x20container\x20ls
 SETUVAR _fish_abbr_dcp:docker\x20container\x20prune
@@ -24,6 +25,7 @@ SETUVAR _fish_abbr_dcu:docker\x20compose\x20up\x20\x2dd
 SETUVAR _fish_abbr_dils:docker\x20image\x20ls
 SETUVAR _fish_abbr_dip:docker\x20image\x20prune\x20\x2da
 SETUVAR _fish_abbr_dl:cd\x20\x7e/Downloads
+SETUVAR _fish_abbr_dnls:docker\x20network\x20ls
 SETUVAR _fish_abbr_dot:git\x20\x2d\x2dgit\x2ddir\x20\x7e/\x2edotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME
 SETUVAR _fish_abbr_dota:git\x20\x2d\x2dgit\x2ddir\x20\x7e/\x2edotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20add
 SETUVAR _fish_abbr_dotas:git\x20\x2d\x2dgit\x2ddir\x20\x7e/\x2edotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20add\x20\x2du\x20\x26\x26\x20git\x20\x20\x2d\x2dgit\x2ddir\x20\x7e/\x2edotfiles/\x20\x2d\x2dwork\x2dtree\x3d\x24HOME\x20status
@@ -34,6 +36,7 @@ SETUVAR _fish_abbr_dotu:git\x20\x2d\x2dgit\x2ddir\x20\x7e/\x2edotfiles/\x20\x2d\
 SETUVAR _fish_abbr_dpa:docker\x20container\x20prune\x20\x26\x26\x20docker\x20image\x20prune\x20\x2da
 SETUVAR _fish_abbr_dpg:code\x20\x7e/Developer/Flutter/DartPlayground/
 SETUVAR _fish_abbr_dps:docker\x20ps
+SETUVAR _fish_abbr_dsa:docker\x20stop\x20\x28docker\x20ps\x20\x2dq\x29
 SETUVAR _fish_abbr_dt:cd\x20\x24HOME/Desktop
 SETUVAR _fish_abbr_dv:cd\x20\x7e/Developer
 SETUVAR _fish_abbr_fpg:code\x20\x7e/Developer/Fish/FishPlayground
@@ -43,6 +46,7 @@ SETUVAR _fish_abbr_gc:git\x20commit\x20\x2dm
 SETUVAR _fish_abbr_gethost:echo\x20\x28whoami\x29\x40\x28hostname\x29
 SETUVAR _fish_abbr_ghtest:cd\x20\x7e/Developer/General/GitTest
 SETUVAR _fish_abbr_gl:git\x20log\x20\x2d\x2dall\x20\x2d\x2ddecorate\x20\x2d\x2doneline\x20\x2d\x2dgraph
+SETUVAR _fish_abbr_gp:git\x20push
 SETUVAR _fish_abbr_gpg:code\x20\x7e/Developer/Go/playground
 SETUVAR _fish_abbr_gs:git\x20status
 SETUVAR _fish_abbr_hm:cd\x20\x7e/
@@ -64,6 +68,7 @@ SETUVAR _fish_abbr_proj:git\x20\x2d\x2dgit\x2ddir\x20\x7e/Developer/Flutter/msc\
 SETUVAR _fish_abbr_sl:eval\x20\x22sudo\x20\x24history\x5b1\x5d\x22
 SETUVAR _fish_abbr_tocgen:gh\x2dmd\x2dtoc
 SETUVAR _fish_abbr_today:date\x20\x2b\x25x
+SETUVAR _fish_abbr_tst:cd\x20/Users/ted/Developer/Misc/Test
 SETUVAR fish_color_autosuggestion:4c566a
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:81a1c1

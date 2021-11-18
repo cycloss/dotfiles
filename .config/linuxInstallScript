@@ -2,9 +2,13 @@
 
 # ENSURE THIS SCRIPT IS RUN WITH ROOT PERMS
 
+apt install wget
+apt install git
+apt install curl
+
 # install lf for linux
 wget https://github.com/gokcehan/lf/releases/download/r6/lf-linux-amd64.tar.gz \
--O lf-linux-amd64.tar.gz
+	-O lf-linux-amd64.tar.gz
 tar xvf lf-linux-amd64.tar.gz
 chmod +x lf
 mv lf /usr/local/bin
@@ -12,7 +16,7 @@ rm lf-linux-amd64.tar.gz
 
 # install fish for linux
 apt install fish
-chsh -s $(which fish) $(whoami)
+chsh -s $(which fish) ted
 
 # install omf for showing git repo status'
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish

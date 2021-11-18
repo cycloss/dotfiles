@@ -475,5 +475,9 @@
         "ui.semanticTokens": true
     },
     "salesforcedx-vscode-apex.java.home": "/Library/Java/JavaVirtualMachines/jdk-11.0.9.jdk/Contents/Home",
-    "go.toolsManagement.autoUpdate": true
+    "go.toolsManagement.autoUpdate": true,
+    "remote.SSH.useLocalServer": false,
+    "remote.SSH.remotePlatform": {
+        "mwprox": "linux"
+    }
 }
