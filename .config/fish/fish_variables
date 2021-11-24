@@ -22,6 +22,7 @@ SETUVAR _fish_abbr_dcp:docker\x20container\x20prune
 SETUVAR _fish_abbr_dcr:docker\x20compose\x20down\x20\x26\x26\x20docker\x20compose\x20up\x20\x2dd
 SETUVAR _fish_abbr_dcrb:docker\x20compose\x20down\x20\x26\x26\x20docker\x20compose\x20build\x20\x26\x26\x20docker\x20compose\x20up\x20\x2dd
 SETUVAR _fish_abbr_dcu:docker\x20compose\x20up\x20\x2dd
+SETUVAR _fish_abbr_did:docker\x20images\x20\x2d\x2ddigests\x20\x7c\x20awk\x20\x27\x7bprintf\x20\x22\x2520\x2ds\x20\x20\x25s\x5cn\x22\x2c\x20\x242\x2c\x20\x243\x7d\x27
 SETUVAR _fish_abbr_dils:docker\x20image\x20ls
 SETUVAR _fish_abbr_dip:docker\x20image\x20prune\x20\x2da
 SETUVAR _fish_abbr_dl:cd\x20\x7e/Downloads
@@ -39,15 +40,17 @@ SETUVAR _fish_abbr_dps:docker\x20ps
 SETUVAR _fish_abbr_dsa:docker\x20stop\x20\x28docker\x20ps\x20\x2dq\x29
 SETUVAR _fish_abbr_dt:cd\x20\x24HOME/Desktop
 SETUVAR _fish_abbr_dv:cd\x20\x7e/Developer
+SETUVAR _fish_abbr_fap:set\x20\x2dUa\x20fish_user_paths
 SETUVAR _fish_abbr_fpg:code\x20\x7e/Developer/Fish/FishPlayground
 SETUVAR _fish_abbr_funced:funced\x20\x2ds
 SETUVAR _fish_abbr_gas:git\x20add\x20\x2dA\x20\x26\x26\x20git\x20status
 SETUVAR _fish_abbr_gc:git\x20commit\x20\x2dm
+SETUVAR _fish_abbr_gd:git\x20diff\x20HEAD
 SETUVAR _fish_abbr_gethost:echo\x20\x28whoami\x29\x40\x28hostname\x29
 SETUVAR _fish_abbr_ghtest:cd\x20\x7e/Developer/General/GitTest
 SETUVAR _fish_abbr_gl:git\x20log\x20\x2d\x2dall\x20\x2d\x2ddecorate\x20\x2d\x2doneline\x20\x2d\x2dgraph
+SETUVAR _fish_abbr_gopg:code\x20\x7e/Developer/Go/playground
 SETUVAR _fish_abbr_gp:git\x20push
-SETUVAR _fish_abbr_gpg:code\x20\x7e/Developer/Go/playground
 SETUVAR _fish_abbr_gs:git\x20status
 SETUVAR _fish_abbr_hm:cd\x20\x7e/
 SETUVAR _fish_abbr_icloud:cd\x20\x7e/Library/Mobile\x5c\x20Documents/com\x7eapple\x7eCloudDocs/
