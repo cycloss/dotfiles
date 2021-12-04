@@ -262,7 +262,7 @@
                 "args": [
                     "--app-id",
                     "com.example.myAppName"
-                ]
+                ],
             },
             // used for debugging
             {
@@ -271,7 +271,8 @@
                 "request": "launch",
                 "mode": "exec",
                 "program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
-                "preLaunchTask": "build current file only"
+                "preLaunchTask": "build current file only",
+                "cwd": "${workspaceFolder}"
             }
         ],
         "compounds": []
@@ -297,7 +298,7 @@
         "perl": "perl",
         "perl6": "perl6",
         "ruby": "ruby",
-        "go": "go run",
+        "go": "cd $dir && go run *.go",
         "lua": "lua",
         "groovy": "groovy",
         "powershell": "powershell -ExecutionPolicy ByPass -File",
@@ -479,5 +480,6 @@
     "remote.SSH.useLocalServer": false,
     "remote.SSH.remotePlatform": {
         "mwprox": "linux"
-    }
+    },
+    "codesnap.showWindowControls": false
 }

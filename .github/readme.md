@@ -18,7 +18,13 @@ git --git-dir ~/.dotfiles/ --work-tree=$HOME checkout
 
 The linux installation is light weight compared to that of macos.
 
-Make sure it has executable permissions and run the install script as root `sudo ~/.config/linuxInstallScript`. This will install `fish`, `lf`, and `trash`.
+Make sure it has executable permissions and run the install script:
+
+```shell
+chmod u+g ~/.config/linuxInstallScript && ~/.config/linuxInstallScript
+```
+
+This will install `fish`, `omf`, `lf`, `trash`, `tldr`, and `ctop`.
 
 ## Macos Install
 

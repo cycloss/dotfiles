@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
+# Run as root
 
-sudo apt update
-sudo apt install wget
-sudo apt install git
-sudo apt install curl
+# install useful tools
+apt update
+apt install wget git curl trash-cli -y
 
 # install lf for linux
 wget https://github.com/gokcehan/lf/releases/download/r6/lf-linux-amd64.tar.gz \
@@ -13,25 +13,23 @@ chmod +x lf
 mv lf /usr/local/bin
 rm lf-linux-amd64.tar.gz
 
-# install fish for linux
-sudo apt install fish
-
-# install omf for showing git repo status'
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-
-# install trash
-sudo apt install trash-cli
-
 # install ctop for containers
-echo "deb http://packages.azlux.fr/debian/ buster main" | sudo tee /etc/apt/sources.list.d/azlux.list
-wget -qO - https://azlux.fr/repo.gpg.key | sudo apt-key add -
-sudo apt install docker-ctop
+echo "deb http://packages.azlux.fr/debian/ buster main" | tee /etc/apt/sources.list.d/azlux.list
+wget -qO - https://azlux.fr/repo.gpg.key | apt-key add -
+apt update
+apt install docker-ctop -y
 
-# install tldr
-sudo apt install tldr
+# install and update tldr
+apt install tldr
 tldr -u
 
 # install ufw for firewall management
-sudo apt install ufw
+apt install ufw
 
-chsh -s $(which fish) $(whoami)
+# install fish for linux
+apt install fish
+
+chsh -s $(which fish) $SUDO_USER
+
+# install omf for showing git repo status'
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish

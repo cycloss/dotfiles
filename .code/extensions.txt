@@ -1,4 +1,5 @@
 abusaidm.html-snippets
+adpyke.codesnap
 albert.TabOut
 BendixMa.dart-data-class-generator
 bmalehorn.vscode-fish
@@ -33,17 +34,6 @@ ms-vsliveshare.vsliveshare
 mushan.vscode-paste-image
 rebornix.ruby
 redhat.java
-richterger.perl
-salesforce.salesforce-vscode-slds
-salesforce.salesforcedx-vscode
-salesforce.salesforcedx-vscode-apex
-salesforce.salesforcedx-vscode-apex-debugger
-salesforce.salesforcedx-vscode-apex-replay-debugger
-salesforce.salesforcedx-vscode-core
-salesforce.salesforcedx-vscode-lightning
-salesforce.salesforcedx-vscode-lwc
-salesforce.salesforcedx-vscode-soql
-salesforce.salesforcedx-vscode-visualforce
 shd101wyy.markdown-preview-enhanced
 tht13.html-preview-vscode
 tomoki1207.pdf
