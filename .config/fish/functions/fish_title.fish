@@ -1,4 +1,3 @@
-# Defined in /var/folders/l6/4wtwvg1903l93zlk1_5rzrzr0000gn/T//fish.RORZQn/fish_title.fish @ line 2
 function fish_title
     # emacs' "term" is basically the only term that can't handle it.
     if not set -q INSIDE_EMACS; or string match -vq '*,term:*' -- $INSIDE_EMACS

@@ -481,5 +481,8 @@
     "remote.SSH.remotePlatform": {
         "mwprox": "linux"
     },
-    "codesnap.showWindowControls": false
+    "codesnap.showWindowControls": false,
+    "editor.cursorBlinking": "phase",
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true
 }
