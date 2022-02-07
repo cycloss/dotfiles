@@ -25,7 +25,7 @@ function gmc -d 'git message commit file, uses .gitmessage file as the message f
     if confirmPrompt
         set -l IFS # set IFS to empty to prevent fish changing lines into a list with no new lines 
         set secondary (cat (git rev-parse --show-toplevel)/.gitmessage)
-        git commit -m $primaryMessage -m "$secondary" && gim
+        git commit -m $primaryMessage -m "$secondary" && gmi
     else
         echo 'Aborting...'
     end

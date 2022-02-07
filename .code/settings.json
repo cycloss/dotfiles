@@ -359,7 +359,7 @@
         "*.ipynb": "jupyter.notebook.ipynb"
     },
     "latex-workshop.view.pdf.viewer": "tab",
-    "terminal.integrated.defaultProfile.osx": "/usr/local/bin/fish",
+    "terminal.integrated.defaultProfile.osx": "fish",
     "python.formatting.provider": "yapf",
     "sde.languageServerMode": "sourcekit-lsp",
     "python.pythonPath": "/usr/local/bin/python3",
@@ -479,7 +479,8 @@
     "go.toolsManagement.autoUpdate": true,
     "remote.SSH.useLocalServer": false,
     "remote.SSH.remotePlatform": {
-        "mwprox": "linux"
+        "mwprox": "linux",
+        "netxms": "linux"
     },
     "codesnap.showWindowControls": false,
     "editor.cursorBlinking": "phase",

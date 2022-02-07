@@ -19,8 +19,9 @@ k9s:
   clusters:
     minikube:
       namespace:
-        active: default
+        active: k8s-test
         favorites:
+        - k8s-test
         - default
       view:
         active: pods
