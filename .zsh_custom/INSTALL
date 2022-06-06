@@ -1,0 +1,8 @@
+#! /bin/bash
+
+zsh_custom_dir=$(dirname $0)
+
+[[ -e $zsh_custom_dir/zsh-abbr ]] && echo 'zsh-abbr already installed' || git clone --depth=1 https://github.com/olets/zsh-abbr.git "$zsh_custom_dir"
+[[ -e $zsh_custom_dir/zsh-autosuggestions ]] && echo 'zsh-autosuggestions already installed' || git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git "$zsh_custom_dir"
+[[ -e $zsh_custom_dir/zsh-history-substring-search ]] && echo 'zsh-history-substring-search already installed' || git clone --depth=1 https://github.com/zsh-users/zsh-history-substring-search.git "$zsh_custom_dir"
+[[ -e $zsh_custom_dir/zsh-syntax-highlighting ]] && echo 'zsh-syntax-highlighting already installed' || git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git "$zsh_custom_dir"

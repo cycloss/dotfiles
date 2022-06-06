@@ -2,7 +2,7 @@
 
 These dotfiles are mainly for zsh, but contain other small configs for nano etc. `~/.zshrc` is where the main config is, and it sources files stored in the `~/.zsh_custom` directory for organisation.
 
-The idea for these dotfiles is for them to be minimal (no plugin manager) but user friendly like the fish shell (which I used to use). Plugins used in the config include:
+The idea for these dotfiles is for them to be minimal (no plugin manager) but user friendly like the fish shell (which I used to use), and easy to manage by using a bare repo. Plugins used in the config include:
 
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
@@ -36,8 +36,26 @@ git --git-dir ~/.dotfiles/ --work-tree=$HOME checkout
 ~/.zsh_custom/INSTALL
 ```
 
-## Update Shallow clone
+- `.nanorc`'s include statement for syntax highlighting may have to be changed to path `/usr/share/nano/*.nanorc` when deploying these dotfiles onto linux
+
+## Updating a Shallow Clone on Server
 
 - Delete `.dotfiles`: `rm -rf ~/.dotfiles`
 
 - Do the two *Repo Setup* commands, but add `-f` to checkout to make it overwrite already checked out files (the `INSTALL` script may have to be run again)
+
+## Updating the Repo
+
+Use the following abbreviations to make working with the bare repo easier:
+
+- `dotu` to update already tracked files
+
+- `dota <file/dir>` to add a file/dir to tracking
+
+- `dotrm <file/dir>` to remove a file/dir from tracking
+
+- `dots` to check the status of the repo
+
+- `dotc` to commit changes
+
+- `dot push` to push changes

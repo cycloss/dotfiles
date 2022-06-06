@@ -66,8 +66,14 @@ setopt pushdignoredups # do not push dups onto dir stack
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
 bindkey "^[[C" forward-char
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+# history substring search seems to work differently on macos and linux
+if [[ $OSTYPE == darwin* ]]; then
+  bindkey '^[[A' history-substring-search-up
+  bindkey '^[[B' history-substring-search-down
+else
+  bindkey "$terminfo[kcuu1]" history-substring-search-up
+  bindkey "$terminfo[kcud1]" history-substring-search-down
+fi
 
 # used for auto suggestions
 # must compinit for completion (tabbed) suggestions to work
