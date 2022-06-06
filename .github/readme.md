@@ -1,58 +1,19 @@
-# My dotfiles
+# Cycloss's Dotfiles
+
+These dotfiles are mainly for zsh, but contain other small configs for nano etc. `~/.zshrc` is where the main config is, and it sources files stored in the `~/.zsh_custom` directory for organisation.
 
 ## Repo setup
 
-Within the home directory, to create a bare repo in `.dotfiles/` (doesn't need to exist) and clone this repo run:
+- Install zsh if not already installed
+
+- Clone the repo (depth 1 for if you don't care about the history):
 
 ```shell
-git clone --bare https://github.com/cycloss/dotfiles.git ~/.dotfiles
+git clone --depth=1 --bare https://github.com/cycloss/dotfiles.git ~/.dotfiles
 ```
 
-Then to place all dotfiles in home run:
+- Place all the repo files into home:
 
 ```shell
 git --git-dir ~/.dotfiles/ --work-tree=$HOME checkout
 ```
-
-## Linux Install
-
-The linux installation is light weight compared to that of macos.
-
-Make sure it has executable permissions and run the install script:
-
-```shell
-chmod u+g ~/.config/linuxInstallScript && ~/.config/linuxInstallScript
-```
-
-This will install `fish`, `omf`, `lf`, `trash`, `tldr`, and `ctop`.
-
-## Macos Install
-
-Install brew with:
-
-```shell
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-- Rename .brewfile to Brewfile
-- Run the following to install brews:
-
-```shell
-brew bundle
-```
-
-- Add vscode, karabiner, btt and mos to brew
-- Place vscode and karabiner configs where they should be
-- Install vscode extensions
-- Import btt presets
-- mos step 31.01, speed 3.66, duration 2.63, smooth scroll yes
-
-### iTerm2 Setup
-
-- Go to `/System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts` and open it in finder
-- Select all the fonts and open, then install to font book. This will allow sf mono to be used in iTerm2
-
-### Keyboard Setup
-
-- Move `CustomLayout.bundle` in .config to /Users/ted/Library/Keyboard\ Layouts and add it from keyboard prefs, input sources, add, *Others*
-- This custom layout remaps `alt+u` and `alt+o` to nothing instead of symbols so they can be used for shortcuts
