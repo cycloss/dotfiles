@@ -37,6 +37,7 @@ git --git-dir ~/.dotfiles/ --work-tree=$HOME checkout
 ```
 
 - `.nanorc`'s include statement for syntax highlighting may have to be changed to path `/usr/share/nano/*.nanorc` when deploying these dotfiles onto linux
+- `chsh -s $(which zsh)` to change login shell
 
 ## Updating a Shallow Clone on Server
 
