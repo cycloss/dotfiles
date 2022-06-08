@@ -24,7 +24,7 @@ Colors for the prompt and syntax highlighting are configured as hex codes and th
 git clone --depth=1 --bare https://github.com/cycloss/dotfiles.git ~/.dotfiles
 ```
 
-- Place all the repo files into home:
+- Place all the repo files into home (append the `-f` flag if it reports that files are already present):
 
 ```shell
 git --git-dir ~/.dotfiles/ --work-tree=$HOME checkout
@@ -36,8 +36,7 @@ git --git-dir ~/.dotfiles/ --work-tree=$HOME checkout
 ~/.zsh_custom/INSTALL
 ```
 
-- `.nanorc`'s include statement for syntax highlighting may have to be changed to path `/usr/share/nano/*.nanorc` when deploying these dotfiles onto linux
-- `chsh -s $(which zsh)` to change login shell
+- `chsh -s $(which zsh)` to change login shell. Will have to log out for it to take effect
 
 ## Updating a Shallow Clone on Server
 
