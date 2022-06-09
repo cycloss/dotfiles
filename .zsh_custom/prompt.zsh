@@ -3,7 +3,7 @@
 # if ssh session, show username
 sshPromptSegment() {
   if [[ -n $SSH_CLIENT ]]; then
-    echo -n '%F{#535623}%n@%m%f ➜ '
+    echo -n '%F{#535623}%n@%m%f '
   fi
 }
 

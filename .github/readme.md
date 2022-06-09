@@ -14,11 +14,11 @@ The idea for these dotfiles is for them to be minimal (no plugin manager) but us
 
 Colors for the prompt and syntax highlighting are configured as hex codes and therefore won't show up properly unless your terminal emulator supports true colors. `echo $COLORTERM` will output `truecolor` if it does.
 
-## Repo Setup
+## Install
 
 - Install zsh if not already installed
 
-- Clone the repo (depth 1 for if you want it to be minimal don't care about the history):
+- Clone the repo (depth 1 for if you want it to be minimal and don't care about the history):
 
 ```shell
 git clone --depth=1 --bare https://github.com/cycloss/dotfiles.git ~/.dotfiles

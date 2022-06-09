@@ -10,6 +10,7 @@ cd $zsh_custom_dir
 [[ -e zsh-syntax-highlighting ]] && echo 'zsh-syntax-highlighting already installed' || git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 # if linux, then edit the .nanorc to point to the correct nano syntax highlighting path
+# changes usr/local to usr
 if [[ $OSTYPE == linux* ]]; then
-    sed -i 's/\/usr\/local/\/usr/g' "$HOME/.nanorc"
+    sed -i 's/usr\/local/usr/g' "$HOME/.nanorc"
 fi    

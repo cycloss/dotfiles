@@ -44,6 +44,16 @@ precmd() {
   echo
 }
 
+
+# used for pathauto suggestions
+# must compinit for completion (tabbed) suggestions to work
+autoload -Uz compinit && compinit
+ZSH_AUTOSUGGEST_STRATEGY=(history)
+_comp_options+=(globdots)
+
+# case insensitive tab auto complete (directories) only if there is no case sensitive match
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
 # tab when line empty shows dirs
 first-tab() {
     if [[ $#BUFFER == 0 ]]; then
@@ -57,7 +67,7 @@ first-tab() {
 setopt auto_cd
 
 zle -N first-tab
-bindkey '^I' first-tab
+bindkey '^[[Z' first-tab
 
 setopt autopushd # auto push directories onto `dirs` stack
 setopt pushdignoredups # do not push dups onto dir stack
@@ -66,6 +76,7 @@ setopt pushdignoredups # do not push dups onto dir stack
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
 bindkey "^[[C" forward-char
+bindkey "^I" autosuggest-accept
 # history substring search seems to work differently on macos and linux
 if [[ $OSTYPE == darwin* ]]; then
   bindkey '^[[A' history-substring-search-up
@@ -75,14 +86,6 @@ else
   bindkey "$terminfo[kcud1]" history-substring-search-down
 fi
 
-# used for auto suggestions
-# must compinit for completion (tabbed) suggestions to work
-autoload -Uz compinit && compinit
-ZSH_AUTOSUGGEST_STRATEGY=(history)
-_comp_options+=(globdots)
-
-# case insensitive tab auto complete (directories) only if there is no case sensitive match
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 # syntax highlighting tweaks
 typeset -A ZSH_HIGHLIGHT_REGEXP
