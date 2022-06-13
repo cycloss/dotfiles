@@ -32,17 +32,33 @@ git --git-dir ~/.dotfiles/ --work-tree=$HOME checkout
 
 - Run the install script which will clone the plugin repos used by this config to where the `.zshrc` expects them to be:
 
-```
+```shell
 ~/.zsh_custom/INSTALL
 ```
 
 - `chsh -s $(which zsh)` to change login shell. Will have to log out for it to take effect
 
-## Updating a Shallow Clone on Server
+## Updating a Shallow Clone on a Server
 
-- Delete `.dotfiles`: `rm -rf ~/.dotfiles`
+- `dot pull` which should expand to:
 
-- Do the two *Repo Setup* commands, but add `-f` to checkout to make it overwrite already checked out files (the `INSTALL` script may have to be run again)
+```shell
+git --git-dir ~/.dotfiles/ --work-tree=$HOME pull`
+```
+
+- `dot checkout` to put the new files where they should be. Should expand to:
+
+```shell
+git --git-dir ~/.dotfiles/ --work-tree=$HOME checkout
+```
+
+- Then run `rl` (`exec zsh`) to load the new config
+
+- May have to run the install script again to clone the plugin repos used by this config to where the `.zshrc` expects them to be:
+
+```shell
+~/.zsh_custom/INSTALL
+```
 
 ## Updating the Repo
 
