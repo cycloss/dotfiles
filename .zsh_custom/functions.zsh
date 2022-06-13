@@ -29,6 +29,12 @@ if [[ $OSTYPE == darwin* ]]; then
 
 fi
 
+# make a new directory and cd into it
+mkcd() {
+    mkdir "$*"
+    cd "$*"
+}
+
 # ghsetup() { 'Sets up a new GitHub repo. (-p | --private)'
 #     getopts "p"
 

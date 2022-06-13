@@ -67,7 +67,7 @@ first-tab() {
 setopt auto_cd
 
 zle -N first-tab
-bindkey '^[[Z' first-tab
+bindkey '^I' first-tab
 
 setopt autopushd # auto push directories onto `dirs` stack
 setopt pushdignoredups # do not push dups onto dir stack
@@ -76,7 +76,7 @@ setopt pushdignoredups # do not push dups onto dir stack
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
 bindkey "^[[C" forward-char
-bindkey "^I" autosuggest-accept
+
 # history substring search seems to work differently on macos and linux
 if [[ $OSTYPE == darwin* ]]; then
   bindkey '^[[A' history-substring-search-up
