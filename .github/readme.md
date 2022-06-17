@@ -2,7 +2,7 @@
 
 These dotfiles are mainly for zsh, but contain other small configs for nano etc. `~/.zshrc` is where the main config is, and it sources files stored in the `~/.zsh_custom` directory for organisation.
 
-The idea for these dotfiles is for them to be minimal (no plugin manager) but user friendly like the fish shell (which I used to use), and easy to manage by using a bare repo. Plugins used in the config include:
+The idea for these dotfiles is for them to be minimal (no plugin manager) but user friendly like the fish shell (which I used to use), and easy to manage by using a bare repo. Plugins are automatically installed by the `~/.zsh_custom/INSTALL` script (see below), and include:
 
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
