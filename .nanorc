@@ -6,19 +6,19 @@ set nohelp true
 set linenumbers true
 set numbercolor black
 set softwrap true
+set tabstospaces
+set tabsize 2
 
 # M is modifier which on macos is esc
-
+# many of these are only possible using iterm2 to remap cmd key combos to ctl
 unbind M-B all
 bind M-B prevword all # cmd j
 unbind M-F all
 bind M-F nextword all # cmd l
 unbind ^K main
-unbind ^U main
-unbind ^K main
 bind ^Z undo main # cmd z
-bind ^K cut main # cmd x
-bind ^U cut main # ctl u
+bind ^K cut main # cmd x remapped to ctl k with iterm 2
+bind ^U copy main # cmd c remapped to ctl u with iterm2
 
 unbind ^Y main
 bind ^Y paste main # cmd p
@@ -28,4 +28,3 @@ unbind ^F all
 bind ^F whereis all # cmd f
 unbind ^G all
 bind ^G findnext all # cmd g
-bind M-C copy main
