@@ -1,8 +1,8 @@
 # Cycloss's Dotfiles
 
-These dotfiles are mainly for zsh, but contain other small configs for nano etc. `~/.zshrc` is where the main config is, and it sources files stored in the `~/.zsh_custom` directory for organisation.
+These dotfiles are mainly for zsh, but contain other small configs for nano and tmux etc. `~/.zshrc` is where the main config is, and it sources files stored in the `~/.zsh_custom` directory for organisation.
 
-The idea for these dotfiles is for them to be minimal (no plugin manager) but user friendly like the fish shell (which I used to use), and easy to manage by using a bare repo. Plugins are automatically installed by the `~/.zsh_custom/INSTALL` script (see below), and include:
+The idea for these dotfiles is for them to be minimal (no plugin manager) but user friendly like the fish shell (which I used to use), easy to manage by using a bare repo, and easy to deploy. Plugins are automatically installed by the `~/.zsh_custom/INSTALL` script (see below), and include:
 
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
@@ -21,6 +21,8 @@ Colors for the prompt and syntax highlighting are configured as hex codes and th
 - Clone the repo (depth 1 for if you want it to be minimal and don't care about the history):
 
 ```shell
+git clone --bare https://github.com/cycloss/dotfiles.git ~/.dotfiles
+# or
 git clone --depth=1 --bare https://github.com/cycloss/dotfiles.git ~/.dotfiles
 ```
 
@@ -64,7 +66,7 @@ git --git-dir ~/.dotfiles/ --work-tree=$HOME checkout
 
 Use the following abbreviations to make working with the bare repo easier:
 
-- `dotu` to update already tracked files
+- `dotu` to add updates to already tracked files
 
 - `dota <file/dir>` to add a file/dir to tracking
 

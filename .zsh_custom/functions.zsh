@@ -27,12 +27,36 @@ if [[ $OSTYPE == darwin* ]]; then
         echo "$joined copied to clipboard..."
     }
 
+    # Creates a new project in vscode
+    mkcode() {
+        if [[ -z "$1" ]]; then
+            echo "mkcode requires at least one argument, the project name"
+        fi
+
+        local proj_dir="$1"
+        mkdir "$proj_dir"
+        # create an array
+        files=("$@")
+        # iterate through from index 1
+        for file in "${files[@]:1}"; do
+            echo "$proj_dir/$file"
+        done
+        code $proj_dir
+    }
+    
 fi
 
 # make a new directory and cd into it
 mkcd() {
     mkdir "$*"
     cd "$*"
+}
+
+myip() {
+    echo -n 'lan: '
+    ip -4 a | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2 || echo 'N/A'
+    echo -n 'wan: '
+    curl -s icanhazip.com || echo 'N/A'
 }
 
 # ghsetup() { 'Sets up a new GitHub repo. (-p | --private)'
@@ -57,3 +81,4 @@ mkcd() {
 #     echo -n $rem_add_cmnd | pbcopy
 #     echo "Remote add command: \"$rem_add_cmnd\" copied to clipboard"
 # }
+
