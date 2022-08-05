@@ -26,6 +26,7 @@ unsetopt LIST_BEEP # do not beep on tab complete
 
 autoload -Uz vcs_info
 autoload -Uz zcalc # enable calculator
+autoload -Uz colors && colors
 
 [[ $COLORTERM = *(24bit|truecolor)* ]] || zmodload zsh/nearcolor # loads nearest color to hexes if terminal emulator doesn't support true color
 

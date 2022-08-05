@@ -48,37 +48,75 @@ fi
 
 # make a new directory and cd into it
 mkcd() {
+    # $* is all positional arguments as single string when quoted
     mkdir "$*"
     cd "$*"
 }
 
 myip() {
     echo -n 'lan: '
-    ip -4 a | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2 || echo 'N/A'
+    # exclude loopback and docker
+    ip -4 a | grep "inet " | grep -vE '(127.0.0.1|172.17.0.1)' | awk '{print $2}'
     echo -n 'wan: '
     curl -s icanhazip.com || echo 'N/A'
 }
 
-# ghsetup() { 'Sets up a new GitHub repo. (-p | --private)'
-#     getopts "p"
+ghsetupUsage() {
+cat << EOF
+ghsetup [ -hp ] [ REPO_NAME ]
 
-#     if test -z "$argv"
-#         echo 'Please provide a repo name'
-#         return 1
-#     end
+Set up a new Github repo, where:
+    -h          show this help
+    -p          set up private repo (defaults to public)
+    REPO_NAME   the name of the new repo e.g. test-repo
+EOF
+}
 
-#     set -l visibility (set -q _flag_private && echo 'true' || echo 'false')
+ghsetup() {
+    # declare local to avoid setting in global scope (will carry over)
+    local pflag
 
-#     echo -e "Setting up remote repo with settings:{\"name\":\"$argv\",\"private\":$visibility}\n"
-#     # -s is silent, S is show error even when silenced
-#     set -l res (curl -sS -u lucas979797:(cat /Users/ted/.k) https://api.github.com/user/repos -d "{\"name\":\"$argv\",\"private\":$visibility}")
+    while getopts ":hp" flag; do
+        case "$flag" in
+            h)
+                ghsetupUsage
+                return
+                ;;
+            p)
+                pflag="true"
+                ;;
+            ?)     
+                echo -e "unknown flag $OPTARG\n"
+                ghsetupUsage
+                return
+                ;;
+        esac
+    done
+
+    if [[ -z "$pflag" ]]; then
+        pflag="false"
+    fi  
+
+    shift $(($OPTIND - 1)) # removes processed parameters by shifting first arg pointer forward
+
+    # check that only one non flag arg provided
+    if [[ $# -ne 1 ]]; then
+        echo -e "error: a single repo name is expected\n"
+        ghsetupUsage
+        return
+    fi
+
+    repoName="$*"
+
+    echo "Setting up remote repo with settings: name: $repoName, private: $pflag"
+    
+    # -s is silent, S is show error even when silenced
+    local res="$(curl -sS -u cycloss:$(cat ~/.k) https://api.github.com/user/repos -d "{\"name\":\"$repoName\",\"private\":$pflag}")"
 #     # -j is raw with no new line
-#     set -l url (echo $res | jq -j .git_url | sed 's/git:\/\//https:\/\//g')
-#     set_color brgreen
-#     echo -e "Remote repo "$argv" successfully created!\n"
-#     set_color normal
-#     set -l rem_add_cmnd "git remote add origin $url"
-#     echo -n $rem_add_cmnd | pbcopy
-#     echo "Remote add command: \"$rem_add_cmnd\" copied to clipboard"
-# }
+    local url="$(echo $res | jq -j .git_url)"
 
+    echo -e "$fg[green]Remote repo "$repoName" successfully created!$reset_color"
+    local rem_add_cmd="git remote add origin $url"
+    echo -n "$rem_add_cmd" | pbcopy
+    echo "Remote add command: \"$rem_add_cmd\" copied to clipboard"
+}
