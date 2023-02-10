@@ -1,4 +1,5 @@
 
+export PATH=${GOPATH}/bin:$PATH
 export ZSH_CUSTOM_DIR="$HOME/.zsh_custom"
 export ABBR_USER_ABBREVIATIONS_FILE=$ZSH_CUSTOM_DIR/abbrs.zsh
 

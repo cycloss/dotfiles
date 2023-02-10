@@ -111,9 +111,9 @@ ghsetup() {
     echo "Setting up remote repo with settings: name: $repoName, private: $pflag"
     
     # -s is silent, S is show error even when silenced
-    local res="$(curl -sS -u cycloss:$(cat ~/.k) https://api.github.com/user/repos -d "{\"name\":\"$repoName\",\"private\":$pflag}")"
+    local res="$(curl -sS -u cycloss:$(cat ~/.k/cycloss-gh-key) https://api.github.com/user/repos -d "{\"name\":\"$repoName\",\"private\":$pflag}")"
 #     # -j is raw with no new line
-    local url="$(echo $res | jq -j .git_url)"
+    local url="$(echo $res | jq -j .git_url | sed 's/git:\/\//https:\/\//g')"
 
     echo -e "$fg[green]Remote repo "$repoName" successfully created!$reset_color"
     local rem_add_cmd="git remote add origin $url"

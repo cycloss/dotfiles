@@ -16,13 +16,21 @@ Colors for the prompt and syntax highlighting are configured as hex codes and th
 
 ## Install
 
-- Install zsh if not already installed
+- Install zsh if not already installed:
 
-- Clone the repo (depth 1 for if you want it to be minimal and don't care about the history):
+```shell
+sudo apt install zsh
+```
+
+- Clone the repo:
 
 ```shell
 git clone --bare https://github.com/cycloss/dotfiles.git ~/.dotfiles
-# or
+```
+
+- Or clone to depth 1 if you only want the current commit:
+
+```shell
 git clone --depth=1 --bare https://github.com/cycloss/dotfiles.git ~/.dotfiles
 ```
 
@@ -38,7 +46,11 @@ git --git-dir ~/.dotfiles/ --work-tree=$HOME checkout
 ~/.zsh_custom/INSTALL
 ```
 
-- `chsh -s $(which zsh)` to change login shell. Will have to log out for it to take effect
+- Change the login shell. Will have to log out to take effect:
+
+```shell
+chsh -s $(which zsh)`
+```
 
 ## Updating a Shallow Clone on a Server
 
