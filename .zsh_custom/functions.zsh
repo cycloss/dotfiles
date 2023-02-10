@@ -13,11 +13,9 @@ ns() {
     nano $script
 }
 
-# only available on macos
-if [[ $OSTYPE == darwin* ]]; then
-
-    # Copies current working directory to clipboard
-    cwd() {
+# Copies current working directory to clipboard
+cwd() {
+    if [[ $OSTYPE == darwin* ]]; then
         local joined="$(pwd)"
         # If files are specified as arguments, these will be added to the path
         if test -n "$1"; then
@@ -25,26 +23,37 @@ if [[ $OSTYPE == darwin* ]]; then
         fi
         echo -n "$joined" | pbcopy
         echo "$joined copied to clipboard..."
-    }
-
-    # Creates a new project in vscode
-    mkcode() {
-        if [[ -z "$1" ]]; then
-            echo "mkcode requires at least one argument, the project name"
-        fi
-
-        local proj_dir="$1"
-        mkdir "$proj_dir"
-        # create an array
-        files=("$@")
-        # iterate through from index 1
-        for file in "${files[@]:1}"; do
-            echo "$proj_dir/$file"
-        done
-        code $proj_dir
-    }
+    else
+        echo -n $(pwd) | xclip -selection clipboard
+    fi
     
+}
+
+if [[ $OSTYPE == linux-gnu ]]; then
+    pbcopy() {
+        xclip -selection clipboard
+    }
+
+    pbpaste() {
+        xclip -selection clipboard -o
+    }
 fi
+
+# Creates a new project in vscode
+mkcode() {
+    if [[ -z "$1" ]]; then
+        echo "mkcode requires at least one argument, the project name"
+    fi
+    local proj_dir="$1"
+    mkdir "$proj_dir"
+    # create an array
+    files=("$@")
+    # iterate through from index 1
+    for file in "${files[@]:1}"; do
+        echo "$proj_dir/$file"
+    done
+    code $proj_dir
+}
 
 # make a new directory and cd into it
 mkcd() {

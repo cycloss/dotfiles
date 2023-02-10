@@ -1,7 +1,14 @@
 
-export PATH=${GOPATH}/bin:$PATH
 export ZSH_CUSTOM_DIR="$HOME/.zsh_custom"
 export ABBR_USER_ABBREVIATIONS_FILE=$ZSH_CUSTOM_DIR/abbrs.zsh
+
+# path
+export PATH=${GOPATH}/bin:$PATH
+# Add applications (where .appimage files are stored) to path
+if [[ $OSTYPE = linux-gnu ]]; then
+  export PATH=$PATH:~/Applications
+  export PATH=$PATH:"$HOME/.pub-cache/bin"
+fi
 
 # plugins
 source $ZSH_CUSTOM_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -19,7 +26,6 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=1000000   # the number of items for the internal history list
 export SAVEHIST=1000000   # maximum number of items for the history file
 
-setopt SHARE_HISTORY # immediately append to history and don't wait til shell closes (INC_APPEND_HISTORY), AND import history commands into all sessions
 setopt HIST_IGNORE_ALL_DUPS # removes old duplicates of the line and keeps the new one even if lines are not
 setopt HIST_IGNORE_SPACE # if command starts with a space, omit it (for security)
 
@@ -74,18 +80,63 @@ bindkey '^I' first-tab
 setopt autopushd # auto push directories onto `dirs` stack
 setopt pushdignoredups # do not push dups onto dir stack
 
-# left and right with cmd j and l
-bindkey "^[^[[C" forward-word
-bindkey "^[^[[D" backward-word
-bindkey "^[[C" forward-char
-
 # history substring search seems to work differently on macos and linux
 if [[ $OSTYPE == darwin* ]]; then
+# left and right with cmd j and l
+  bindkey "^[^[[C" forward-word
+  bindkey "^[^[[D" backward-word
+  bindkey "^[[C" forward-char
   bindkey '^[[A' history-substring-search-up
   bindkey '^[[B' history-substring-search-down
 else
   bindkey "$terminfo[kcuu1]" history-substring-search-up
   bindkey "$terminfo[kcud1]" history-substring-search-down
+    # left and right with ctl j and l
+  bindkey "\e[1;5C" forward-word
+  bindkey "\e[1;5D" backward-word
+  
+  # must unbind keys which use ^X as prefix to be able
+  # found with bindkey | grep -i '\^X'
+  # to then set KEYTIMEOUT to prevent delay on cut
+  bindkey -r "^X^B"
+  bindkey -r "^X^F"
+  bindkey -r "^X^J"
+  bindkey -r "^X^K"
+  bindkey -r "^X^N"
+  bindkey -r "^X^O"
+  bindkey -r "^X^R"
+  bindkey -r "^X^U"
+  bindkey -r "^X^V"
+  bindkey -r "^X^X"
+  bindkey -r "^X*" 
+  bindkey -r "^X=" 
+  bindkey -r "^X?" 
+  bindkey -r "^XC" 
+  bindkey -r "^XG" 
+  bindkey -r "^Xa" 
+  bindkey -r "^Xc" 
+  bindkey -r "^Xd" 
+  bindkey -r "^Xe" 
+  bindkey -r "^Xg" 
+  bindkey -r "^Xh" 
+  bindkey -r "^Xm" 
+  bindkey -r "^Xn" 
+  bindkey -r "^Xr" 
+  bindkey -r "^Xs" 
+  bindkey -r "^Xt" 
+  bindkey -r "^Xu" 
+  bindkey -r "^X~" 
+
+  bindkey "^X" kill-whole-line
+  KEYTIMEOUT=1
+
+  # for paste
+  bindkey -r "^P"
+  bindkey "^P" yank
+
+  # for clear
+  bindkey -r "^R"
+  bindkey "^R" clear-screen
 fi
 
 
