@@ -49,7 +49,7 @@ git --git-dir ~/.dotfiles/ --work-tree=$HOME checkout
 - Change the login shell. Will have to log out to take effect:
 
 ```shell
-chsh -s $(which zsh)`
+chsh -s $(which zsh)
 ```
 
 ## Updating a Shallow Clone on a Server
