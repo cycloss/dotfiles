@@ -81,7 +81,7 @@ setopt autopushd # auto push directories onto `dirs` stack
 setopt pushdignoredups # do not push dups onto dir stack
 
 # history substring search seems to work differently on macos and linux
-if [[ $OSTYPE == darwin* ]]; then
+if [[ $OSTYPE == darwin* || -n $SSH_CLIENT ]]; then
 # left and right with cmd j and l
   bindkey "^[^[[C" forward-word
   bindkey "^[^[[D" backward-word
