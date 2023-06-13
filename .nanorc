@@ -1,8 +1,7 @@
 
 # enables syntax highlighting
-include "/usr/local/share/nano/*.nanorc"
+include "/usr/share/nano/*.nanorc"
 
-set nohelp true
 set linenumbers true
 set numbercolor black
 set softwrap true
@@ -21,20 +20,14 @@ bind ^K cut main # cmd x remapped to ctl k with iterm 2
 bind ^U copy main # cmd c remapped to ctl u with iterm2
 
 unbind ^Y main
-bind ^Y paste main # cmd p
+bind ^P paste main # cmd p
+
+unbind ^X all
+bind ^X cut main
+unbind ^D all
+bind ^D exit all # cmd d
+# bind ^O savefile all # cmd s
 unbind ^F all
 bind ^F whereis all # cmd f
 unbind ^G all
 bind ^G findnext all # cmd g
-
-# macos bindings when iterm2 remapping in effect
-bind ^O savefile all # cmd s
-bind ^W exit all # cmd d
-
-
-# linux bindings when iterm 2 remapping isn't in effect
-# unbind ^X all
-# bind ^X cut main
-# unbind ^D all
-# bind ^D exit all # cmd d
-

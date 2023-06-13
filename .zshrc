@@ -1,14 +1,14 @@
 
-export ZSH_CUSTOM_DIR="$HOME/.zsh_custom"
-export ABBR_USER_ABBREVIATIONS_FILE=$ZSH_CUSTOM_DIR/abbrs.zsh
-
-# path
-export PATH=${GOPATH}/bin:$PATH
 # Add applications (where .appimage files are stored) to path
 if [[ $OSTYPE = linux-gnu ]]; then
-  export PATH=$PATH:~/Applications
-  export PATH=$PATH:"$HOME/.pub-cache/bin"
+  PATH=$PATH:~/Applications
 fi
+
+# To add more to path simply add `:<dir>` to the end
+export PATH=$PATH:"$HOME/.pub-cache/bin"
+
+export ZSH_CUSTOM_DIR="$HOME/.zsh_custom"
+export ABBR_USER_ABBREVIATIONS_FILE=$ZSH_CUSTOM_DIR/abbrs.zsh
 
 # plugins
 source $ZSH_CUSTOM_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -26,6 +26,7 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=1000000   # the number of items for the internal history list
 export SAVEHIST=1000000   # maximum number of items for the history file
 
+setopt SHARE_HISTORY # immediately append to history and don't wait til shell closes (INC_APPEND_HISTORY), AND import history commands into all sessions
 setopt HIST_IGNORE_ALL_DUPS # removes old duplicates of the line and keeps the new one even if lines are not
 setopt HIST_IGNORE_SPACE # if command starts with a space, omit it (for security)
 
@@ -80,9 +81,12 @@ bindkey '^I' first-tab
 setopt autopushd # auto push directories onto `dirs` stack
 setopt pushdignoredups # do not push dups onto dir stack
 
+# https://linux.die.net/man/1/zshzle for binding shortcuts
+# `read` in terminal 
+
 # history substring search seems to work differently on macos and linux
-if [[ $OSTYPE == darwin* || -n $SSH_CLIENT ]]; then
-# left and right with cmd j and l
+if [[ $OSTYPE == darwin* ]]; then
+  # left and right with cmd j and l
   bindkey "^[^[[C" forward-word
   bindkey "^[^[[D" backward-word
   bindkey "^[[C" forward-char
@@ -91,7 +95,7 @@ if [[ $OSTYPE == darwin* || -n $SSH_CLIENT ]]; then
 else
   bindkey "$terminfo[kcuu1]" history-substring-search-up
   bindkey "$terminfo[kcud1]" history-substring-search-down
-    # left and right with ctl j and l
+  # left and right with ctl j and l
   bindkey "\e[1;5C" forward-word
   bindkey "\e[1;5D" backward-word
   
@@ -166,7 +170,7 @@ else
 fi
 
 # make grep highlight results using color
-export GREP_OPTIONS='--color=auto'
+alias grep='grep --color=auto'
 
 # Add color to less / man pages
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -181,3 +185,9 @@ echo
 echo -e '\t\t\t\tWelcome Ted'
 echo
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# set up gvm
+[[ -s "/home/ted/.gvm/scripts/gvm" ]] && source "/home/ted/.gvm/scripts/gvm"
