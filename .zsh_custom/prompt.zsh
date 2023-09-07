@@ -41,7 +41,7 @@ gitStatus() {
     behind="↓"
     diverged="⥄"
     dirty="⨯"
-    none="◦"
+    uptodate="◦"
 
     if gitIsDirty; then
         echo -n "$dirty"
@@ -55,15 +55,15 @@ gitStatus() {
             echo -n "$promptMarker"
         ;;  
         "0	0")
-            echo -n "$none"
+            echo -n "$uptodate"
         ;;    
-        "*	0")
+        *'	'0)
             echo -n "$behind"
         ;;
-        "0	*")
+        0'	'*)
             echo -n "$behind"
         ;;
-        "*")
+        *)
             echo -n "$diverged"
         ;;    
     esac
