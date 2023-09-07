@@ -9,5 +9,6 @@ alias lsl='ls -aFlh --color=auto'
 if [[ $OSTYPE == darwin* ]]; then
     alias marktext='/Applications/MarkText.app/Contents/MacOS/MarkText'
 else
+    alias bell='paplay /usr/share/sounds/freedesktop/stereo/complete.oga'
     alias keep='python3 ~/Developer/misc/keep/src/keep.py -r 60 100 -c > /dev/null &'
 fi

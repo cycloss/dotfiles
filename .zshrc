@@ -30,6 +30,9 @@ setopt SHARE_HISTORY # immediately append to history and don't wait til shell cl
 setopt HIST_IGNORE_ALL_DUPS # removes old duplicates of the line and keeps the new one even if lines are not
 setopt HIST_IGNORE_SPACE # if command starts with a space, omit it (for security)
 
+# Enable pearl regex support
+setopt RE_MATCH_PCRE
+
 unsetopt LIST_BEEP # do not beep on tab complete
 
 autoload -Uz vcs_info
@@ -180,6 +183,14 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;42;30m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;36m'
+
+# Always enable file watchers and hot module reloading.
+export PILLAR_DEV_WEB=true
+# Always use the top-level src directory as the watch target, to include
+# things like the web design system in the watched files (and not just the web clients).
+# Note: the trailing slash is important
+export PILLAR_HOT_RELOAD_ROOT=src/
+
 
 echo
 echo -e '\t\t\t\tWelcome Ted'

@@ -1,6 +1,6 @@
 
 
-# new script. ands are to quit if failed at any point
+# new script adds a new executable script, immediately opening it in nano
 ns() {
     if [[ $# -ne 1 ]]; then
         echo 'ns expects exactly 1 argument'
@@ -61,7 +61,7 @@ myip() {
     curl -s icanhazip.com || echo 'N/A'
 }
 
-ghsetupUsage() {
+ghsetupusage() {
 cat << EOF
 ghsetup [ -hp ] [ REPO_NAME ]
 
@@ -79,7 +79,7 @@ ghsetup() {
     while getopts ":hp" flag; do
         case "$flag" in
             h)
-                ghsetupUsage
+                ghsetupusage
                 return
                 ;;
             p)
@@ -87,7 +87,7 @@ ghsetup() {
                 ;;
             ?)     
                 echo -e "unknown flag $OPTARG\n"
-                ghsetupUsage
+                ghsetupusage
                 return
                 ;;
         esac
@@ -102,7 +102,7 @@ ghsetup() {
     # check that only one non flag arg provided
     if [[ $# -ne 1 ]]; then
         echo -e "error: a single repo name is expected\n"
-        ghsetupUsage
+        ghsetupusage
         return
     fi
 
@@ -121,11 +121,12 @@ ghsetup() {
     echo "Remote add command: \"$rem_add_cmd\" copied to clipboard"
 }
 
-# gac (git add changed) takes a commit hash and adds all files that were changed in that commit hash and still exist to the staging area
+# gac (git add changed) takes a commit hash and adds all files that were changed in that commit hash and have changes in the working directory to the staging area.
+# This is useful for fixing up for a rebase if you have a load of changes and you need to sort through commits to find out which changes need to go with which commit.
 gac() {
     gitroot
-    checkCommitHash "$1"
-    print -P "%F{green}git adding files changed in commit $1 that still exist:%f"
+    validatecommithash "$1"
+    print -P "%F{green}git adding files changed in commit $1 that have changes in the working directory:%f"
     # -r makes it go into all dirs of repo rather than just top level
     files=$(git diff-tree --no-commit-id --name-only -r "$1")
     # -r prevents backslashes from being interpreted as escape characters
@@ -169,7 +170,7 @@ gacf() {
 # gacfs (git add changed fixup since) is gacf for every single commit since the given commit (does not include that given commit)
 # It applies fixups in the order of oldest commit to newest. It does not automatically rebase.
 gacfs() {
-    checkCommitHash $1
+    validatecommithash $1
     echo "processing commits from $1..HEAD (exclusive of $1)" >&2
     echo
     commits=$(git log "$1"..HEAD --pretty=format:%H --reverse)
@@ -178,7 +179,7 @@ gacfs() {
     done <<< "$commits"
 }
 
-checkCommitHash() {
+validatecommithash() {
     commit_hash=$1
     git show "$commit_hash" > /dev/null
     if [[ $? -ne 0 ]]; then
@@ -193,13 +194,13 @@ gitroot() {
     fi
 }
 
-# gitResolveAllOurs resolves conflicts in favour of ours during a merge conflict when files are still uncommitted
-gitResolveAllOurs() {
+# gitresolveallours resolves conflicts in favour of ours during a merge conflict when files are still uncommitted
+gro() {
     git diff --name-only --diff-filter=U | xargs git checkout --ours
 }
 
-# gitResolveAllOurs resolves conflicts in favour of theirs during a merge conflict when files are still uncommitted
-gitResolveAllTheirs() {
+# gitresolvealltheirs resolves conflicts in favour of theirs during a merge conflict when files are still uncommitted
+grt() {
     git diff --name-only --diff-filter=U | xargs git checkout --theirs
 }
 
@@ -209,4 +210,33 @@ grls() {
     'git diff-tree --no-commit-id --name-only -r {} | while read filename; do \
         git show {}:"$filename" 2>/dev/null | grep -q "$1" && echo "[found in commit {}]: $filename"; \
      done' -- "$1"
+}
+
+# gitchangedfilediffs uses the first argument's commit hash to get a list of files changed since that hash, then gets the difference in those files between the HEAD and the second argument's commit hash
+gitchangedfilediffs() {
+
+    # Get the list of changed files from the first commit
+    local changed_files=$(git diff --name-only "$1")
+
+    # Iterate over each changed file and show the diff
+    while read -r file; do
+        git diff "$2" "HEAD" -- "$file"
+        echo "\n\n\n\n\n\n\n"
+    done <<< "$changed_files"
+}
+
+# set the path of this file as a variable on load of this script
+func_file_path="$(readlink -f "$0")"
+
+# lf (list functions) lists all the functions in this file
+lf() {
+  # Read the file line by line
+  while IFS= read -r line; do
+    # Check if the line starts with "function_name() {"
+    if [[ $line =~ '^([\w_]+)\(\)\s\{' ]]; then
+      # Extract the function name
+      function_name="$match[1]"
+      echo $function_name
+    fi
+  done < "$func_file_path"
 }
