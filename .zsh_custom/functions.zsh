@@ -204,7 +204,7 @@ grt() {
     git diff --name-only --diff-filter=U | xargs git checkout --theirs
 }
 
-# grls (git reflog search) searches all commits in the reflog for a given string, and outputs where it is found 
+# grls (git reflog search) searches all commits in the reflog for a given string, and outputs which commits it is found in
 grls() {
     git reflog | awk '{print $1}' | xargs -I{} sh -c \
     'git diff-tree --no-commit-id --name-only -r {} | while read filename; do \
@@ -239,4 +239,35 @@ lf() {
       echo $function_name
     fi
   done < "$func_file_path"
+}
+
+confirm() {
+    echo "Are you sure you want to $1? (y/n): "
+    read answer
+    if [[ "$answer" != "y" ]]; then
+        print -P "%F{yellow}Operation Aborted%f"
+        return 1
+    fi
+}
+
+grho() {
+    origin="origin/$(git branch --show-current )"
+    confirm "hard reset HEAD to $origin"
+    if [[ $? -ne 0 ]]; then
+        return 1
+    fi
+    git reset --hard "$origin"
+}
+
+# execdirs runs the given string command in all directories
+execdirs() {
+    local command=("$@")
+
+    # Iterate through each directory in the current directory
+    for dir in */; do
+        if [ -d "$dir" ]; then
+            print -P "%F{green}Running command '${command[*]}' in directory: $dir%f"
+            (cd "$dir" && "${command[@]}")
+        fi
+    done
 }

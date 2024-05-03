@@ -185,11 +185,11 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;36m'
 
 # Always enable file watchers and hot module reloading.
-export PILLAR_DEV_WEB=true
+# export PILLAR_DEV_WEB=true
 # Always use the top-level src directory as the watch target, to include
 # things like the web design system in the watched files (and not just the web clients).
 # Note: the trailing slash is important
-export PILLAR_HOT_RELOAD_ROOT=src/
+# export PILLAR_HOT_RELOAD_ROOT=src/
 
 
 echo
