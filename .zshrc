@@ -5,7 +5,7 @@ if [[ $OSTYPE = linux-gnu ]]; then
 fi
 
 # To add more to path simply add `:<dir>` to the end
-export PATH=$PATH:"$HOME/.pub-cache/bin"
+export PATH=$PATH:"$HOME/.pub-cache/bin:/home/ted/camunda-modeler-5.23.0-linux-x64/"
 
 export ZSH_CUSTOM_DIR="$HOME/.zsh_custom"
 export ABBR_USER_ABBREVIATIONS_FILE=$ZSH_CUSTOM_DIR/abbrs.zsh
@@ -202,3 +202,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # set up gvm
 [[ -s "/home/ted/.gvm/scripts/gvm" ]] && source "/home/ted/.gvm/scripts/gvm"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/ted/.dart-cli-completion/zsh-config.zsh ]] && . /home/ted/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+

@@ -228,7 +228,7 @@ gitchangedfilediffs() {
 # set the path of this file as a variable on load of this script
 func_file_path="$(readlink -f "$0")"
 
-# lf (list functions) lists all the functions in this file
+# lf (list functions) lists all the functions in this file (functions.zsh)
 lf() {
   # Read the file line by line
   while IFS= read -r line; do
@@ -270,4 +270,22 @@ execdirs() {
             (cd "$dir" && "${command[@]}")
         fi
     done
+}
+
+# potp (pillar one time password) gets the one time password from the pillar local environment secret and copies it to the clipboard
+potp() {
+    TOTP=$(pillar login totp "ZMNTNU4IXXHKK2YPP3ATHBUPSCZCQJR2" 2>&1)
+    # This removes TOPT: prefix from the output
+    echo -n ${TOTP#"TOTP: "} | xclip -selection clipboard
+}
+
+# pnuke (pillar nuke) nukes the pillar local environment
+pnuke() {
+    make pillar
+    pillar destroy
+    git clean -xdf -e src/clients/ -e .vscode/ -e src/services -e src/pkg -e src/cmd -e src/gateways -e src/tools -e src/test
+    # mkdir logs
+    # rm -rf /usr/local/share/terraform/providers/gitlab.com/adalpha/custom-cert
+    # make tf-provider-clean
+    make tf-provider
 }
