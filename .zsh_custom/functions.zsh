@@ -204,7 +204,7 @@ grt() {
     git diff --name-only --diff-filter=U | xargs git checkout --theirs
 }
 
-# grls (git reflog search) searches all commits in the reflog for a given string, and outputs where it is found 
+# grls (git reflog search) searches all commits in the reflog for a given string, and outputs which commits it is found in
 grls() {
     git reflog | awk '{print $1}' | xargs -I{} sh -c \
     'git diff-tree --no-commit-id --name-only -r {} | while read filename; do \
@@ -228,7 +228,7 @@ gitchangedfilediffs() {
 # set the path of this file as a variable on load of this script
 func_file_path="$(readlink -f "$0")"
 
-# lf (list functions) lists all the functions in this file
+# lf (list functions) lists all the functions in this file (functions.zsh)
 lf() {
   # Read the file line by line
   while IFS= read -r line; do
@@ -239,4 +239,53 @@ lf() {
       echo $function_name
     fi
   done < "$func_file_path"
+}
+
+confirm() {
+    echo "Are you sure you want to $1? (y/n): "
+    read answer
+    if [[ "$answer" != "y" ]]; then
+        print -P "%F{yellow}Operation Aborted%f"
+        return 1
+    fi
+}
+
+grho() {
+    origin="origin/$(git branch --show-current )"
+    confirm "hard reset HEAD to $origin"
+    if [[ $? -ne 0 ]]; then
+        return 1
+    fi
+    git reset --hard "$origin"
+}
+
+# execdirs runs the given string command in all directories
+execdirs() {
+    local command=("$@")
+
+    # Iterate through each directory in the current directory
+    for dir in */; do
+        if [ -d "$dir" ]; then
+            print -P "%F{green}Running command '${command[*]}' in directory: $dir%f"
+            (cd "$dir" && "${command[@]}")
+        fi
+    done
+}
+
+# potp (pillar one time password) gets the one time password from the pillar local environment secret and copies it to the clipboard
+potp() {
+    TOTP=$(pillar login totp "ZMNTNU4IXXHKK2YPP3ATHBUPSCZCQJR2" 2>&1)
+    # This removes TOPT: prefix from the output
+    echo -n ${TOTP#"TOTP: "} | xclip -selection clipboard
+}
+
+# pnuke (pillar nuke) nukes the pillar local environment
+pnuke() {
+    make pillar
+    pillar destroy
+    git clean -xdf -e src/clients/ -e .vscode/ -e src/services -e src/pkg -e src/cmd -e src/gateways -e src/tools -e src/test
+    # mkdir logs
+    # rm -rf /usr/local/share/terraform/providers/gitlab.com/adalpha/custom-cert
+    # make tf-provider-clean
+    make tf-provider
 }
