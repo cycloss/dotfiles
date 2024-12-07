@@ -30,9 +30,6 @@ setopt SHARE_HISTORY # immediately append to history and don't wait til shell cl
 setopt HIST_IGNORE_ALL_DUPS # removes old duplicates of the line and keeps the new one even if lines are not
 setopt HIST_IGNORE_SPACE # if command starts with a space, omit it (for security)
 
-# Enable pearl regex support
-setopt RE_MATCH_PCRE
-
 unsetopt LIST_BEEP # do not beep on tab complete
 
 autoload -Uz vcs_info
